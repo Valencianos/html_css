@@ -51,6 +51,20 @@ h1, button, a, p {
 .navigation {
     font-family: Gilroy-Medium;
     font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navi_logo {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navi_menu {
+    display: flex;
+    width: 533px;
+    justify-content: space-between;
 }
 
 .home {
@@ -60,22 +74,35 @@ h1, button, a, p {
 }
 
 .main {
-    margin-bottom: 15px;
+    margin-bottom: 162px;
 }
 
-.mainContent {}
+.mainContent {
+    display: flex;
+    justify-content: space-between;
+}
 
-.mainContent__leftside {}
+.mainContent__leftside {
+    max-width: 522px;
+}
 
 .mainContent__leftside h1 {
     font-family: Gilroy-Bold;
     font-size: 60px;
+    margin-bottom: 17px;
 }
 
 .mainContent__leftside p {
     color: #888;
     font-family: Gilroy-Medium;
     font-size: 20px;
+    max-width: 466px;
+    margin-bottom: 37px;
+}
+
+.mainContent__leftside_btns {
+    display: flex;
+    gap: 72px;
 }
 
 .mainContent__leftbtn {
@@ -104,5 +131,6 @@ h1, button, a, p {
 }
 
 .logos {
-    
+    display: flex;
+    justify-content: space-between;
 }
