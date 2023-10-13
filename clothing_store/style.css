@@ -32,8 +32,9 @@ h1, h2, h3, h4, h5, h6, button, p {
 
 .header {
     background: #222;
-    width: vw;
+    max-width: 1600px;
     height: 75px;
+    flex-shrink: 0;
 }
 
 .navigation {
@@ -70,23 +71,27 @@ h1, h2, h3, h4, h5, h6, button, p {
 
 .main {
     background-color: #F1E4E6;
-    width: vw;
-    height: 764px;
+    max-width: 1600px;
+    max-height: 764px;
+    flex-shrink: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .main_photo {
-    width: 764px;
+    max-height: 764px;
+    max-width: 800px;
     display: flex;
     align-items: flex-end;
     justify-content: center;
 }
 
 .main_text {
-    width: 764px;
-    margin-top: 290px;
-    margin-bottom: 381px;
+    max-height: 764px;
+    max-width: 800px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .text {
@@ -228,4 +233,23 @@ h1, h2, h3, h4, h5, h6, button, p {
     padding: 15px 39px;
     cursor: pointer;
     background: #fff;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        max-width: 736px;
+    }
+    .header {
+        height: 74px;
+        max-width: 1024px;
+    }
+    .main {
+        max-height: 368px;
+    }
+    .main_text {
+        max-width: 386px;
+    }
+    .main_photo {
+        max-width: 386px;
+    }
 }
