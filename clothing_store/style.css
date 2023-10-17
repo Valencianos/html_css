@@ -32,34 +32,26 @@ h1, h2, h3, h4, h5, h6, button, p {
 
 .header {
     background: #222;
-    max-width: 1600px;
-    height: 75px;
-    flex-shrink: 0;
 }
 
 .navigation {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    padding: 19px 0;
 }
 
 .navi_left {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-end;
     gap: 41px;
 }
 
 .navi_right {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-end;
     gap: 41px;
-}
-
-.logo {
-    padding-top: 18px;
-    padding-bottom: 19px;
 }
 
 .bttn {
@@ -72,82 +64,63 @@ h1, h2, h3, h4, h5, h6, button, p {
 .main {
     background-color: #F1E4E6;
     max-width: 1600px;
-    max-height: 764px;
-    flex-shrink: 0;
-    display: flex;
-    justify-content: space-around;
+    margin: 0 auto;
 }
 
-.main_photo {
-    max-height: 764px;
-    max-width: 800px;
-    display: flex;
-    align-items: flex-end;
+.main_content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 63px;
     justify-content: center;
-}
-
-.main_text {
-    max-height: 764px;
-    max-width: 800px;
-    display: flex;
-    justify-content: flex-start;
     align-items: center;
 }
 
-.text {
+.main_text {
     border-left: 12px solid #F16D7F;
+    padding-left: 16px;
 }
 
-.text h1 {
+.main_text h1 {
     font-size: 48px;
     font-weight: 900;
-    margin-left: 16px;
-    
 }
 
-.text h2 {
+.main_text h2 {
     font-size: 32px;
     font-weight: 700;
-    margin-left: 16px;
 }
 
 .category_choice {
     display: grid;
-    grid-template-columns: 360px 360px 360px;
-    grid-template-rows: 260px 180px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 30px;
-    margin-top: 65px;
-    margin-bottom: 96px;
+    padding-top: 65px;
 }
 
 .category_1 {
     background-image: url("./img/For_women.png");
-    width: 360px;
     height: 260px;
 }
 
 .category_2 {
     background-image: url("./img/For_men.png");
-    width: 360px;
     height: 260px;
 }
 
 .category_3 {
     background-image: url("./img/For_kids.png");
-    width: 360px;
     height: 260px;
 }
 
 .category_4 {
-    grid-row: span 3;
+    grid-column: span 3;
     background-image: url("./img/Accesories.png");
-    width: 1140px;
     height: 180px;
 }
 
 .cat_bg {
-    background: rgba(33, 22, 22, 0.70);
-    width: 100%;
+    background-color: rgba(33, 22, 22, 0.70);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -176,7 +149,7 @@ h1, h2, h3, h4, h5, h6, button, p {
 
 .featured h3 {
     font-size: 30px;
-    margin-bottom: 6px;
+    padding-bottom: 6px;
 }
 
 .featured p {
@@ -188,8 +161,7 @@ h1, h2, h3, h4, h5, h6, button, p {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 30px;
-    margin-top: 65px;
-    margin-bottom: 96px;
+    margin-top: 48px;
 }
 
 .card {
@@ -201,17 +173,18 @@ h1, h2, h3, h4, h5, h6, button, p {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 16px;
     padding: 24px 16px;
 }
 
 .card_text h6 {
     font-size: 13px;
+    padding-bottom: 14px;
 }
 
 .card_text p {
     color: #5D5D5D;
     font-weight: 300;
+    padding-bottom: 18px;
 }
 
 .card_text h5 {
@@ -235,21 +208,54 @@ h1, h2, h3, h4, h5, h6, button, p {
     background: #fff;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media(min-width: 768px) and (max-width: 1024px) {
     .container {
         max-width: 736px;
     }
-    .header {
-        height: 74px;
-        max-width: 1024px;
+    
+    .main_content {
+        gap: 39px;
     }
-    .main {
-        max-height: 368px;
-    }
+
     .main_text {
-        max-width: 386px;
+        margin-left: 39px;
     }
-    .main_photo {
-        max-width: 386px;
+
+    .text h1 {
+        font-size: 44px;      
+    }
+    
+    .text h2 {
+        font-size: 24px;
+    }
+
+    .category_choice {
+        gap: 19px;    
+    }
+
+    .category_1 category_2 category_3 {
+        height: 167px;
+    }
+    
+    .category_4 {
+        height: 116px;
+    }
+    
+    .featured h3 {
+        padding-bottom: 3px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 16px;
+        margin-top: 73px;
+    }
+
+    .links {
+        display: flex;
+        justify-content: center;
+        margin-top: 32px;
+        margin-bottom: 70px;
     }
 }
