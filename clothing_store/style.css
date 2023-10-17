@@ -221,11 +221,11 @@ h1, h2, h3, h4, h5, h6, button, p {
         margin-left: 39px;
     }
 
-    .text h1 {
+    .main_text h1 {
         font-size: 44px;      
     }
     
-    .text h2 {
+    .main_text h2 {
         font-size: 24px;
     }
 
@@ -257,5 +257,64 @@ h1, h2, h3, h4, h5, h6, button, p {
         justify-content: center;
         margin-top: 32px;
         margin-bottom: 70px;
+    }
+}
+
+@media(max-width: 767px) {
+    .container {
+        max-width: 343px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .main_content {
+        height: 363px;
+        display: flex;
+    }
+
+    .main_text {
+        flex-direction: column;
+        padding-left: 15px;
+    }
+
+    .main_text h1 {
+        font-size: 38px;      
+    }
+    
+    .main_text h2 {
+        font-size: 20px;
+    }
+
+    .category_choice {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        padding-top: 64px;
+    }
+
+    .category_1 category_2 category_3 {
+        height: 247px;
+    }
+    
+    .category_4 {
+        height: 111px;
+    }
+
+    .featured {
+        margin-top: 64px;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 64px;
+    }
+
+    .links {
+        margin-top: 40px;
+        margin-bottom: 85px;
     }
 }
