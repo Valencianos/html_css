@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+img {
+    display: block;
+    min-width: 100%;
+}
+
+/* эффект наведения */
+.menu__link:hover {
+    color: red;
+}
+
+/* эффект нажатия */
+.menu__link:active {
+    color: green;
+}
+
+/* добавить для первого элемента */
+.menu__list:first-child {
+    text-decoration: underline;
+}
+
+/* добавить для последнего элемента */
+.menu__list:last-child {
+    font-weight: bold;
+}
+
+/* добавить для конкретного элемента */
+.menu__list:nth-child(3) {
+    background-color: orange;
+}
+
+.product {
+    width: 250px;
+    padding: 24px;
+    border: 1px solid #000;
+}
+
+.product__img {
+    background-color: forestgreen;
+    height: 150px;
+    position: relative;
+}
+
+.product__img::after {
+    content: "new";
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.product__img::before {
+    content: "sale";
+    position: absolute;
+    background-color: red;
+}
+
+svg:hover {
+    transform: scale(2);
+    fill: blue;
+}
+
+.item {
+    width: 150px;
+    height: 86px;
+    background-color: forestgreen;
+    border: 1px solid #000;
+    transition: transform 1s;
+}
+
+.item_1:hover {
+    transform: translateX(50px);
+}
+
+.item_2:hover {
+    transform: scale(2);
+}
+
+.item_3:hover {
+    transform: rotate(60deg);
+}
+
+.content {
+    margin-top: 200px;
+    margin-left: 200px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.items {
+    position: absolute;
+    width: 150px;
+    height: 64.5px;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+}
+
+.item_20 {
+    transform: rotate(45deg);
+}
+
+.item_30 {
+    transform: rotate(-45deg);
+}
+
+.item_40 {
+    transform: rotate(90deg);
+}
+
+.button {
+    margin-top: 50px;
+    width: 150px;
+    height: 50px;
+    background-color: purple;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-family: sans-serif;
+    font-size: 18px;
+    animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+@keyframes shake-horizontal {
+    0%,
+    100% {
+    transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+    transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60% {
+    transform: translateX(10px);
+    }
+    80% {
+    transform: translateX(8px);
+    }
+    90% {
+    transform: translateX(-8px);
+    }
+}

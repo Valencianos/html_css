@@ -1,0 +1,60 @@
+body {
+	background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+	font-family: sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+.link {
+	color: cornflowerblue;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.title {
+	color: #aa2222;
+	font-size: 20px;
+	line-height: 36px;
+	font-weight: 500;
+}
+
+.text {
+	font-style: italic;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 30px;
+	color: #7d7987;
+}
+
+.subtitle {
+	color: coral;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 36px;
+	line-height: 80px;
+}
+
+.picture {
+	border-radius: 20px 50px 10px 80px;
+	width: 350px;
+}
+
+.inputText {
+	width: 200px;
+	height: 40px;
+	outline: none;
+	border: 1px solid #ccc;
+	border-radius: 15px;
+	font-size: 14px;
+	line-height: 30px;
+}
+
+.btn {
+	width: 100px;
+	height: 30px;
+	font-size: 14px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+}
