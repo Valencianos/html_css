@@ -207,6 +207,30 @@ h1, h2, h3, h4, h5, h6, button, p {
     background: #fff;
 }
 
+.footer__adv {
+    background-color: #222224;
+    height: 341px;
+    flex-shrink: 0;
+    margin-top: 95px;
+
+}
+
+.footer__advertize {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__advertize_text h3 {
+    color: #FBFBFB;
+    font-size: 20px;
+}
+
+.footer__advertize_text p {
+    color: #FBFBFB;
+    font-weight: 300;
+}
+
 @media(min-width: 768px) and (max-width: 1024px) {
     .container {
         max-width: 736px;
