@@ -102,11 +102,6 @@ h1, h2, h3, h4, h5, h6, button, p, ul {
     position: relative;
 }
 
-
-.menu_active {
-
-}
-
 .menu-active__all {
     width: 232px;
     background: #FFF;
@@ -118,9 +113,9 @@ h1, h2, h3, h4, h5, h6, button, p, ul {
     flex-direction: column;
 }
 
-/* .menu-close {
-
-} */
+.hide {
+    display: none;
+}
 
 .menu-heading {
     font-weight: 700;
@@ -138,6 +133,10 @@ h1, h2, h3, h4, h5, h6, button, p, ul {
     color: #6F6E6E;
     padding-top: 11px;
     padding-left: 53px;
+}
+
+li {
+    list-style-type: none;
 }
 
 .category_choice {
