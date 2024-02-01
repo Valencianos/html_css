@@ -1,4 +1,4 @@
-const menuActive = document.querySelector('.menu-active'); // find menu
+const menuActive = document.querySelector('.menu'); // find menu
 const burger = document.querySelector('.user-list__item-menu'); // find burger button
 // const menuClose = document.querySelector('.menu-close'); // find button x
 
