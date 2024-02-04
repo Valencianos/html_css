@@ -10378,14 +10378,14 @@ readers do not read off random characters that represent icons */
   box-sizing: border-box;
 }
 
-.header {
-  background-color: #fff;
+body {
+  scroll-behavior: smooth;
+  background: #fff;
 }
 
-.header__top {
-  height: 100px;
-  border: 1px solid #ececec;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.17);
+img {
+  display: block;
+  max-width: 100%;
 }
 
 .container {
@@ -10393,18 +10393,17 @@ readers do not read off random characters that represent icons */
   margin: 0 auto;
 }
 
-.navigation__top {
+.navigation {
+  height: 100px;
   display: flex;
   justify-content: space-between;
 }
-
 .navigation__left {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
 }
-
-.logo-title {
+.navigation__left-logo {
   margin-left: 13px;
   font-size: 27px;
   line-height: 32px;
@@ -10412,6 +10411,22 @@ readers do not read off random characters that represent icons */
   text-transform: uppercase;
   letter-spacing: 0.025em;
   color: #222222;
+}
+.navigation__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 26px;
+}
+.navigation__right button {
+  width: 130px;
+  height: 38px;
+  background-color: #f16d7f;
+  font-size: 15px;
+  line-height: 32px;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  color: #ffffff;
 }
 
 .search {
@@ -10461,19 +10476,16 @@ readers do not read off random characters that represent icons */
   color: #a4a4a4;
 }
 
-.header__bottom {
-  height: 51px;
-}
-
 .menu {
+  height: 51px;
   display: flex;
   justify-content: center;
   padding: 20px 0;
 }
-
 .menu__list {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   gap: 30px;
   font-size: 14px;
   line-height: 26px;
