@@ -10644,4 +10644,49 @@ img {
 
 .banner__text-fashion {
   color: #F16D7F;
+}
+
+.choice {
+  margin-top: 98px;
+}
+
+.choice__category {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.choice__category a {
+  cursor: pointer;
+}
+
+.category__big {
+  grid-row: span 2;
+  position: relative;
+}
+
+.category {
+  position: relative;
+}
+
+.category-text {
+  position: absolute;
+  top: 26px;
+  background-color: #fff;
+  padding: 16px 20px;
+}
+
+.category-text p {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  color: #222222;
+}
+
+.category-text h2 {
+  font-size: 30px;
+  color: #F16D7F;
 }/*# sourceMappingURL=style.css.map */
