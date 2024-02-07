@@ -336,3 +336,234 @@ img {
     color: $colorSelectSite;
 }
 
+.fetured__text {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.fetured__text h3 {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    color: #222222;
+}
+
+.fetured__text p {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color: #9f9f9f;
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.card-pic1 {
+    background-image: url(../img/pic1.png);
+    background-size: cover;
+    width: 260px;
+    height: 280px;
+}
+
+.card-pic2 {
+    background-image: url(../img/pic2.png);
+    background-size: cover;
+    width: 260px;
+    height: 280px;
+}
+
+.card-pic3 {
+    background-image: url(../img/pic3.png);
+    background-size: cover;
+    width: 260px;
+    height: 280px;
+}
+
+.card-pic4 {
+    background-image: url(../img/pic4.png);
+    background-size: cover;
+    width: 260px;
+    height: 280px;
+}
+
+.card-pic5 {
+    background-image: url(../img/pic5.png);
+    background-size: cover;
+    width: 260px;
+    height: 280px;
+}
+
+.card-pic6 {
+    background-image: url(../img/pic6.png);
+    background-size: cover;
+    width: 260px;
+    height: 280px;
+}
+
+.card-pic7 {
+    background-image: url(../img/pic7.png);
+    background-size: cover;
+    width: 260px;
+    height: 280px;
+}
+
+.card-pic8 {
+    background-image: url(../img/pic8.png);
+    background-size: cover;
+    width: 260px;
+    height: 280px;
+}
+
+.card_dark {
+    display: none;
+    background-color: rgba(58, 56, 56, 0.86);
+    height: 100%;
+}
+
+.card_button {
+    width: 123px;
+    height: 39px;
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background: none;
+}
+
+.card_button p {
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.card:hover .card_dark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover {
+    box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.15);
+    cursor:pointer;
+}
+
+.card_text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 17px;
+    padding: 19px 12px;
+}
+
+.card_text h6 {
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #222222;
+}
+
+.card_text h5 {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #f16d7f;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+    margin-bottom: 113px;
+    &_button {
+        background: #f16d7f;
+        border: 1px solid #FFF;
+        color: #FFF;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.025em;
+        padding: 18px 20px;
+        cursor: pointer;
+    }
+    &_button:hover {
+        background: #FFF;
+        border: 1px solid #FF6A6A;
+        color: #F26376;
+    }
+    & i {
+        font-size: 15px;
+        letter-spacing: 0.025em;
+        padding-left: 9px;
+    }
+}
+
+.offer {
+    height: 529px;
+}
+
+.offer__banner {
+    display: flex;
+
+}
+
+.offer__left {
+    position: relative;
+    width: 767px;
+}
+
+.offer__text {
+    position: absolute;
+    top: 146px;
+    left: 39px;
+    & h4 {
+        font-size: 53.7px;
+        font-weight: 700;
+        letter-spacing: 0.025em;
+        color: #ffffff;
+    }
+    & p {
+        font-size: 32.2px;
+        font-weight: 700;
+        letter-spacing: 0.025em;
+        color: #ffffff;
+    }
+    & .discount {
+        color: #f16d7f;
+    }
+}
+
+.offer__right {
+    background-color: #222224;
+}
+
+.offer__advantages {
+
+}
+
+.offer__advantages-text h5{
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    color: #fbfbfb;
+}
+
+.offer__advantages-text p {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.025em;
+    color: #fbfbfb;
+}
