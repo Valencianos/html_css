@@ -10,18 +10,21 @@
     <header class="header">
         <div class="header__top container">
             <div class="header__top-left">
-                <a href="#" class="header__top-left-logo"><img src="./img/logo.png" alt="main logo"></a>
-                <h1 class="header__top-left-title">BRAN<span style="color: #f16d7f; font-weight: 900;">D</span></h1>
-                <form class="search">
-                    <button class="search__browse">
-                        <p>Browse</p>
-                        <i class="fas fa-caret-down"></i>
-                    </button>
-                    <input class="search__input" type="text" placeholder="Search for Item...">
-                    <button class="search__button">
-                        <i class="fa fa-search"></i>
-                    </button>
-                </form>
+                <a href="#" class="header__top-left-logo">
+                    <img src="./img/logo.png" alt="main logo">
+                    <h1 class="header__top-left-title">BRAN<span style="color: #f16d7f; font-weight: 900;">D</span></h1>
+                </a>
+                <div class="search">
+                    <details class="search__browse">
+                        <summary class="search__summary">Browse<i class="fas fa-caret-down"></i></summary>
+                    </details>
+                    <form action="">
+                        <input class="search__input" type="text" placeholder="Search for Item...">
+                        <button class="search__button" type="submit">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </form>
+                </div>
             </div>
             <div class="header__top-right">
                 <a href="#" class="cart"><img src="./img/basket.svg" alt=""></a>
@@ -232,7 +235,7 @@
                 <a class="card"  href="#">
                     <div class="card-pic3">
                         <div class="card_dark">
-                            <button class="card_button">
+                            <button class="card_button" type="submit">
                                 <img src="./img/card_basket.svg" alt="basket">
                                 <p>Add to Cart</p>
                             </button>
@@ -355,29 +358,60 @@
         <section class="feedback">
             <div class="feedback__background">
                 <div class="feedback__content container">
-                    <div class="feedback__picture">
-                        <img src="./img/face in eclipse.png" alt="face">
-                        <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“</p>
-                    </div>
+                    <figure class="feedback__opinion">
+                        <img class="feedback__picture" src="./img/face in eclipse.png" alt="face">
+                        <figcaption class="feedback__text">
+                            <h6>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, 
+                            a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</h6>
+                            <p><span class="siteSelect">Bin Burhan</span><br>Dhaka, Bd</p>
+                        </figcaption>
+                    </figure>
                     <div class="feedback__subscription">
                         <div class="feedback__subscription_title">
                             <h2>SUBSCRIBE</h2>
                             <h4>FOR OUR NEWSLETTER AND PROMOTION</h4>
                         </div>
                         <div class="feedback__subscription_form">
-                            <div class="feedback__subscription_link">
+                            <div class="feedback_link">
                                 <form action="#">
                                     <input type="email" placeholder="Enter Your Email" required>
                                 </form>
                             </div>
-                            <div class="feedback__subscription_button">
-                                <button type="submit">Subscribe</button>
+                            <div>
+                                <button class="feedback_button" type="submit">Subscribe</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <section class="contacts">
+            
+        </section>
     </main>
+    <footer class="footer">
+        <div class="footer__media container">
+            <div class="footer__media_text">
+                <h6>© 2022 Brand All Rights Reserved.</h6>
+            </div>
+            <div class="footer__icons">
+                <button class="footer__icons_button">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </button>
+                <button class="footer__icons_button">
+                    <i class="fa-brands fa-twitter"></i>
+                </button>
+                <button class="footer__icons_button">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </button>
+                <button class="footer__icons_button">
+                    <i class="fa-brands fa-pinterest-p"></i>
+                </button>
+                <button class="footer__icons_button">
+                    <i class="fa-brands fa-google-plus-g"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
