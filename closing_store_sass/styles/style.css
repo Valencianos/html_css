@@ -10417,12 +10417,12 @@ a, button {
   display: flex;
   align-items: center;
 }
-.header__top-left-logo {
+.header__top-left_logo {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-.header__top-left-title {
+.header__top-left_title {
   font-size: 27px;
   font-weight: 300;
   text-transform: uppercase;
@@ -10441,6 +10441,7 @@ a, button {
 }
 .search__browse {
   width: 87px;
+  position: absolute;
   background-color: #cdcdcc;
   background-image: linear-gradient(180deg, #f9f9f9 0%, #f5f5f5 100%);
   border: 1px solid #e6e6e6;
@@ -10485,6 +10486,41 @@ a, button {
   line-height: 32px;
   font-weight: 400;
   color: #a4a4a4;
+}
+
+.filter-box {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 20px 13px;
+  top: -10px;
+  width: 262px;
+}
+
+.filter-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-title {
+  width: 236px;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 14px;
+  line-height: 32px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #232323;
+  margin-bottom: 16px;
+}
+
+.filter-link {
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #4e4e4e;
+  display: block;
+}
+.filter-link:hover {
+  color: #F16D7F;
 }
 
 .account__button {
