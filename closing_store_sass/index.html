@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Closing store</title>
+    <title>Clothing store</title>
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
@@ -39,7 +39,7 @@
                             </div>
                         </div>
                     </details>
-                    <form action="">
+                    <form action="#">
                         <input class="search__input" type="text" placeholder="Search for Item...">
                         <button class="search__button" type="submit">
                             <i class="fa fa-search"></i>
@@ -180,10 +180,9 @@
     <main class="main">
         <section class="banner">
             <div class="banner__content container">
-                <div class="banner__title">
-                    <span class="banner-line"></span>
-                    <h1>THE BRAND</h1>
-                    <h2>OF LUXURIOUS <span class="banner__text-fashion">FASHION</span></h2>
+                <div class="banner__text">
+                    <h1 class="banner__text_title">THE BRAND</h1>
+                    <p class="banner__text_fashion">OF LUXURIOUS <span class="banner__text_select">FASHION</span></p>
                 </div>
             </div>
         </section>
@@ -219,160 +218,172 @@
                 </a>
             </div>
         </section>
-        <section class="fetured container">
-            <div class="fetured__text">
-                <h3>Fetured Items</h3>
-                <p>Shop for items based on what we featured in this week</p>
-            </div>
-            <div class="cards">
-                <a class="card"  href="#">
-                    <div class="card-pic1">
-                        <div class="card_dark">
-                            <button class="card_button">
+        <section class="fetured">
+            <div class="container">
+                <div class="fetured__text">
+                    <h3 class="fetured__text_title">Fetured Items</h3>
+                    <p class="fetured__text_subtitle">Shop for items based on what we featured in this week</p>
+                </div>
+                <div class="card-box">
+                    <div class="card">
+                        <a class="card__link"  href="#">
+                            <img class="card__pic" src="./img/pic1.png" alt="item">
+                            <div class="card__text">
+                                <p class="card__text_dsc">Mango People T-shirt</p>
+                                <p class="card__text_price">$52.00</p>
+                            </div>
+                        </a>
+                        <div class="basket-box">
+                            <a href="#" class="basket-box__add">
                                 <img src="./img/card_basket.svg" alt="basket">
-                                <p>Add to Cart</p>
-                            </button>
+                                <p class="basket-box__add_text">Add to Cart</p>
+                            </a>
                         </div>
                     </div>
-                    <div class="card_text">
-                        <h6>Mango People T-shirt</h6>
-                        <h5>$52.00</h5>
-                    </div>
-                </a>
-                <a class="card"  href="#">
-                    <div class="card-pic2">
-                        <div class="card_dark">
-                            <button class="card_button">
+                    <div class="card">
+                        <a class="card__link"  href="#">
+                            <img class="card__pic" src="./img/pic2.png" alt="item">
+                            <div class="card__text">
+                                <p class="card__text_dsc">Mango People T-shirt</p>
+                                <p class="card__text_price">$52.00</p>
+                            </div>
+                        </a>
+                        <div class="basket-box">
+                            <a href="#" class="basket-box__add">
                                 <img src="./img/card_basket.svg" alt="basket">
-                                <p>Add to Cart</p>
-                            </button>
+                                <p class="basket-box__add_text">Add to Cart</p>
+                            </a>
                         </div>
                     </div>
-                    <div class="card_text">
-                        <h6>Mango People T-shirt</h6>
-                        <h5>$52.00</h5>
-                    </div>
-                </a>
-                <a class="card"  href="#">
-                    <div class="card-pic3">
-                        <div class="card_dark">
-                            <button class="card_button" type="submit">
+                    <div class="card">
+                        <a class="card__link"  href="#">
+                            <img class="card__pic" src="./img/pic3.png" alt="item">
+                            <div class="card__text">
+                                <p class="card__text_dsc">Mango People T-shirt</p>
+                                <p class="card__text_price">$52.00</p>
+                            </div>
+                        </a>
+                        <div class="basket-box">
+                            <a href="#" class="basket-box__add">
                                 <img src="./img/card_basket.svg" alt="basket">
-                                <p>Add to Cart</p>
-                            </button>
+                                <p class="basket-box__add_text">Add to Cart</p>
+                            </a>
                         </div>
                     </div>
-                    <div class="card_text">
-                        <h6>Mango People T-shirt</h6>
-                        <h5>$52.00</h5>
-                    </div>
-                </a>
-                <a class="card"  href="#">
-                    <div class="card-pic4">
-                        <div class="card_dark">
-                            <button class="card_button">
+                    <div class="card">
+                        <a class="card__link"  href="#">
+                            <img class="card__pic" src="./img/pic4.png" alt="item">
+                            <div class="card__text">
+                                <p class="card__text_dsc">Mango People T-shirt</p>
+                                <p class="card__text_price">$52.00</p>
+                            </div>
+                        </a>
+                        <div class="basket-box">
+                            <a href="#" class="basket-box__add">
                                 <img src="./img/card_basket.svg" alt="basket">
-                                <p>Add to Cart</p>
-                            </button>
+                                <p class="basket-box__add_text">Add to Cart</p>
+                            </a>
                         </div>
                     </div>
-                    <div class="card_text">
-                        <h6>Mango People T-shirt</h6>
-                        <h5>$52.00</h5>
-                    </div>
-                </a>
-                <a class="card"  href="#">
-                    <div class="card-pic5">
-                        <div class="card_dark">
-                            <button class="card_button">
+                    <div class="card">
+                        <a class="card__link"  href="#">
+                            <img class="card__pic" src="./img/pic5.png" alt="item">
+                            <div class="card__text">
+                                <p class="card__text_dsc">Mango People T-shirt</p>
+                                <p class="card__text_price">$52.00</p>
+                            </div>
+                        </a>
+                        <div class="basket-box">
+                            <a href="#" class="basket-box__add">
                                 <img src="./img/card_basket.svg" alt="basket">
-                                <p>Add to Cart</p>
-                            </button>
+                                <p class="basket-box__add_text">Add to Cart</p>
+                            </a>
                         </div>
                     </div>
-                    <div class="card_text">
-                        <h6>Mango People T-shirt</h6>
-                        <h5>$52.00</h5>
-                    </div>
-                </a>
-                <a class="card"  href="#">
-                    <div class="card-pic6">
-                        <div class="card_dark">
-                            <button class="card_button">
+                    <div class="card">
+                        <a class="card__link"  href="#">
+                            <img class="card__pic" src="./img/pic6.png" alt="item">
+                            <div class="card__text">
+                                <p class="card__text_dsc">Mango People T-shirt</p>
+                                <p class="card__text_price">$52.00</p>
+                            </div>
+                        </a>
+                        <div class="basket-box">
+                            <a href="#" class="basket-box__add">
                                 <img src="./img/card_basket.svg" alt="basket">
-                                <p>Add to Cart</p>
-                            </button>
+                                <p class="basket-box__add_text">Add to Cart</p>
+                            </a>
                         </div>
                     </div>
-                    <div class="card_text">
-                        <h6>Mango People T-shirt</h6>
-                        <h5>$52.00</h5>
-                    </div>
-                </a>
-                <a class="card"  href="#">
-                    <div class="card-pic7">
-                        <div class="card_dark">
-                            <button class="card_button">
+                    <div class="card">
+                        <a class="card__link"  href="#">
+                            <img class="card__pic" src="./img/pic7.png" alt="item">
+                            <div class="card__text">
+                                <p class="card__text_dsc">Mango People T-shirt</p>
+                                <p class="card__text_price">$52.00</p>
+                            </div>
+                        </a>
+                        <div class="basket-box">
+                            <a href="#" class="basket-box__add">
                                 <img src="./img/card_basket.svg" alt="basket">
-                                <p>Add to Cart</p>
-                            </button>
+                                <p class="basket-box__add_text">Add to Cart</p>
+                            </a>
                         </div>
                     </div>
-                    <div class="card_text">
-                        <h6>Mango People T-shirt</h6>
-                        <h5>$52.00</h5>
-                    </div>
-                </a>
-                <a class="card"  href="#">
-                    <div class="card-pic8">
-                        <div class="card_dark">
-                            <button class="card_button">
+                    <div class="card">
+                        <a class="card__link"  href="#">
+                            <img class="card__pic" src="./img/pic8.png" alt="item">
+                            <div class="card__text">
+                                <p class="card__text_dsc">Mango People T-shirt</p>
+                                <p class="card__text_price">$52.00</p>
+                            </div>
+                        </a>
+                        <div class="basket-box">
+                            <a href="#" class="basket-box__add">
                                 <img src="./img/card_basket.svg" alt="basket">
-                                <p>Add to Cart</p>
-                            </button>
+                                <p class="basket-box__add_text">Add to Cart</p>
+                            </a>
                         </div>
-                    </div>
-                    <div class="card_text">
-                        <h6>Mango People T-shirt</h6>
-                        <h5>$52.00</h5>
-                    </div>
-                </a>
-            </div>
-            <div class="links">
-                <button class="links_button">Browse All Product<i class="fa-solid fa-arrow-right-long"></i></button>
-            </div>
-        </section>
-        <section class="offer container">
-            <div class="offer__banner">
-                <div class="offer__left">
-                    <img src="./img/offer.png" alt="offer image">
-                    <div class="offer__text">
-                        <h4>30% <span class="discount">OFFER</span></h4>
-                        <p>FOR WOMEN</p>
                     </div>
                 </div>
-                <div class="offer__right">
-                    <article class="offer__advantages">
-                        <img src="./img/lorry.png" alt="delivery">
-                        <div class="offer__advantages-text">
-                            <h5>Free Delivery</h5>
-                            <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+                <div class="links">
+                    <button class="links_button">Browse All Product<i class="fa-solid fa-arrow-right-long"></i></button>
+                </div>
+            </div>
+        </section>
+        <section class="offer">
+            <div class="container">
+                <div class="offer__banner">
+                    <div class="offer__left">
+                        <img class="offer__pic" src="./img/offer.png" alt="offer image">
+                        <div class="offer__text">
+                            <h4 class="offer__text_heading">30% <span class="siteSelect">OFFER</span></h4>
+                            <p class="offer__text_txt">FOR WOMEN</p>
                         </div>
-                    </article>
-                    <article class="offer__advantages">
-                        <img src="./img/discount.png" alt="discount">
-                        <div class="offer__advantages-text">
-                            <h5>Sales & discounts</h5>
-                            <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
-                        </div>
-                    </article>
-                    <article class="offer__advantages">
-                        <img src="./img/crown.png" alt="delivery">
-                        <div class="offer__advantages-text">
-                            <h5>Quality assurance</h5>
-                            <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
-                        </div>
-                    </article>
+                    </div>
+                    <div class="offer__right">
+                        <article class="offer__advantages">
+                            <img class="offer__pic" src="./img/lorry.png" alt="delivery">
+                            <div class="offer__advantages-text">
+                                <h5 class="offer__advantages-text_heading">Free Delivery</h5>
+                                <p class="offer__advantages-text_txt">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+                            </div>
+                        </article>
+                        <article class="offer__advantages">
+                            <img class="offer__pic" src="./img/discount.png" alt="discount">
+                            <div class="offer__advantages-text">
+                                <h5 class="offer__advantages-text_heading">Sales & discounts</h5>
+                                <p class="offer__advantages-text_txt">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+                            </div>
+                        </article>
+                        <article class="offer__advantages">
+                            <img src="./img/crown.png" alt="delivery">
+                            <div class="offer__advantages-text">
+                                <h5 class="offer__advantages-text_heading">Quality assurance</h5>
+                                <p class="offer__advantages-text_txt">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </div>
         </section>
