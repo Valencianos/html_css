@@ -10436,6 +10436,7 @@ a, button {
 
 .search {
   width: 404px;
+  height: 38px;
   margin-left: 37px;
   position: relative;
 }
@@ -10841,20 +10842,28 @@ a, button {
 }
 .offer__right {
   background-color: #222224;
-  width: 373px;
+  display: flex;
+  flex-direction: column;
+  padding: 48px 36px;
+  gap: 48px;
 }
 .offer__advantages {
-  padding: 46px 38px 0 38px;
   display: flex;
+  width: 373px;
+}
+.offer__pic {
+  align-self: start;
 }
 .offer__advantages-text {
   display: flex;
   flex-direction: column;
+  margin-left: 30px;
 }
 .offer__advantages-text_heading {
   font-size: 20px;
   font-weight: 700;
   color: #fbfbfb;
+  margin-bottom: 17px;
 }
 .offer__advantages-text_txt {
   font-size: 14px;
@@ -10880,26 +10889,35 @@ a, button {
   display: flex;
 }
 .feedback__picture {
-  padding: 111px 29px 0 0;
+  margin-top: 111px;
+  margin-right: 28px;
+  align-self: start;
 }
 .feedback__text {
-  padding: 123px 0 0 0;
+  padding-top: 123px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 19px;
-  max-width: 386px;
+  align-items: flex-start;
+  width: 386px;
 }
-.feedback__text h6 {
+.feedback__text_opinion {
   font-size: 16px;
   font-weight: 400;
   font-style: italic;
+  line-height: 26px;
   color: #222224;
+  margin-bottom: 19px;
 }
-.feedback__text p {
+.feedback__text_name {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #f16d7f;
+}
+.feedback__text_location {
   font-size: 12px;
   font-weight: 300;
+  line-height: 14px;
   color: #222224;
 }
 .feedback__subscription {
@@ -10951,6 +10969,50 @@ a, button {
   font-size: 14px;
   font-weight: 400;
   color: #ffffff;
+}
+
+.info {
+  display: flex;
+  margin-top: 109px;
+  margin-bottom: 89px;
+}
+.info__block {
+  width: 427px;
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+}
+.info__text {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  color: #898989;
+}
+.info__links {
+  margin-left: 64px;
+  display: grid;
+  grid-template-columns: repeat(3, 216.3333333333px);
+}
+.info__list {
+  display: flex;
+  flex-direction: column;
+}
+.info__title {
+  margin-bottom: 45px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #f16d7f;
+}
+.info__item {
+  font-size: 16px;
+  line-height: 42px;
+  font-weight: 400;
+  color: #898989;
+  display: block;
+}
+.info__item:hover {
+  color: #F16D7F;
 }
 
 .footer {
