@@ -10488,6 +10488,7 @@ summary::-webkit-details-marker {
   line-height: 32px;
   font-weight: 300;
   color: #a4a4a4;
+  outline: none;
 }
 .search__button {
   width: 36px;
@@ -10986,6 +10987,7 @@ summary::-webkit-details-marker {
   background-image: url(../img/reply_background.png);
   background-size: cover;
   background-position: bottom;
+  background-repeat: no-repeat;
 }
 .feedback__background {
   background-color: rgba(244, 244, 244, 0.7);
