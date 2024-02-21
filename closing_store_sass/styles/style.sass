@@ -61,33 +61,35 @@ summary::-webkit-details-marker
         &-left
             display: flex
             align-items: center
-            &_logo
-                display: flex
-                align-items: center
-                gap: 12px
-            &_title
-                font-size: 27px
-                font-weight: 300
-                text-transform: uppercase
-                color: #222222
         &-right
             display: flex
             align-items: center
             gap: 26px
 
-.search
+.logo
+    &__link
+        display: flex
+        align-items: center
+        gap: 12px
+    &__title
+        font-size: 27px
+        font-weight: 300
+        text-transform: uppercase
+        color: #222222
+
+.browse-search
     width: 404px
     height: 38px
     margin-left: 37px
-    position: relative
-    &__browse
-        width: 87px
-        position: absolute
-        background-color: #cdcdcc
-        background-image: linear-gradient(180.0deg, #f9f9f9 0%, #f5f5f5 100%)
-        border: 1px solid #e6e6e6
-        border-radius: 3px 0px 0px 3px
-        z-index: 10
+    display: flex
+
+.browse
+    width: 87px
+    background-color: #cdcdcc
+    background-image: linear-gradient(180.0deg, #f9f9f9 0%, #f5f5f5 100%)
+    border: 1px solid #e6e6e6
+    border-radius: 3px 0px 0px 3px
+    z-index: 10
     &__summary
         display: flex
         justify-content: center
@@ -99,38 +101,11 @@ summary::-webkit-details-marker
         color: #222222
         & i
             color: #838383
-    &__input
-        width: 317px
-        padding-left: 16px
-        position: absolute
-        top: 0
-        left: 87px
+    &-box
         background-color: #ffffff
-        border: 1px solid #e6e6e6
-        border-radius: 0px 3px 3px 0px
-        font-size: 14px
-        line-height: 32px
-        font-weight: 300
-        color: #a4a4a4
-        outline: none
-    &__button
-        width: 36px
-        position: absolute
-        top: 0
-        right: 0
-        background-color: #ffffff
-        border: 1px solid #e6e6e6
-        border-radius: 0px 3px 3px 0px
-        font-size: 14px
-        line-height: 32px
-        font-weight: 400
-        color: #a4a4a4
-
-.filter-box
-    background-color: #ffffff
-    border-radius: 5px
-    padding: 20px 13px
-    width: 262px
+        border-radius: 5px
+        padding: 20px 13px
+        width: 262px
     // &::before
     //     content: ""
     //     display: block
@@ -140,30 +115,50 @@ summary::-webkit-details-marker
     //     top: -9px
     //     left: 15px
     //     transform: rotate(45deg)
+    &-list
+        display: flex
+        flex-direction: column
+        margin-bottom: 16px
+    &-title
+        width: 236px
+        border-bottom: 1px solid #e8e8e8
+        font-size: 14px
+        line-height: 32px
+        font-weight: 400
+        text-transform: uppercase
+        color: #232323
+        margin-bottom: 16px
+    &-link
+        font-size: 14px
+        line-height: 28px
+        font-weight: 400
+        color: #4e4e4e
+        display: block
+        &:hover
+            color: $colorSelectSite
 
-.filter-list
-    display: flex
-    flex-direction: column
-    margin-bottom: 16px
-
-.filter-title
-    width: 236px
-    border-bottom: 1px solid #e8e8e8
-    font-size: 14px
-    line-height: 32px
-    font-weight: 400
-    text-transform: uppercase
-    color: #232323
-    margin-bottom: 16px
-
-.filter-link
-    font-size: 14px
-    line-height: 28px
-    font-weight: 400
-    color: #4e4e4e
-    display: block
-    &:hover
-        color: $colorSelectSite
+.search
+    &__block
+        display: flex
+    &__input
+        width: 317px
+        padding-left: 16px
+        background-color: #ffffff
+        border: 1px solid #e6e6e6
+        font-size: 14px
+        line-height: 32px
+        font-weight: 300
+        color: #a4a4a4
+        outline: none
+    &__button
+        width: 36px
+        background-color: #ffffff
+        border: 1px solid #e6e6e6
+        border-radius: 0px 3px 3px 0px
+        font-size: 14px
+        line-height: 32px
+        font-weight: 400
+        color: #a4a4a4
 
 .cart
     position: relative
