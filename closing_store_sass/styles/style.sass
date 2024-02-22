@@ -76,49 +76,48 @@ summary::-webkit-details-marker
         font-weight: 300
         text-transform: uppercase
         color: #222222
-
-.browse-search
-    width: 404px
-    height: 38px
-    margin-left: 37px
-    display: flex
+        span
+            color: $colorSelectSite
+            font-weight: 900
 
 .browse
-    width: 87px
     background-color: #cdcdcc
     background-image: linear-gradient(180.0deg, #f9f9f9 0%, #f5f5f5 100%)
     border: 1px solid #e6e6e6
     border-radius: 3px 0px 0px 3px
     z-index: 10
+    position: relative
+    margin-left: 37px
     &__summary
-        display: flex
-        justify-content: center
-        align-items: center
-        gap: 8px
-        font-size: 14px
+        width: 87px
+        text-align: center
         line-height: 32px
+        font-size: 14px
         font-weight: 300
         color: #222222
-        & i
+        cursor: pointer
+        i
+            margin-left: 8px
             color: #838383
     &-box
+        position: absolute
         background-color: #ffffff
         border-radius: 5px
         padding: 20px 13px
         width: 262px
-    // &::before
-    //     content: ""
-    //     display: block
-    //     height: 16px
-    //     width: 16px
-    //     background-color: #fff
-    //     top: -9px
-    //     left: 15px
-    //     transform: rotate(45deg)
-    &-list
         display: flex
         flex-direction: column
         margin-bottom: 16px
+        &::before
+            position: absolute
+            content: ""
+            display: block
+            height: 12px
+            width: 12px
+            background-color: #fff
+            top: -7px
+            left: 66px
+            transform: rotate(45deg)
     &-title
         width: 236px
         border-bottom: 1px solid #e8e8e8
@@ -128,18 +127,19 @@ summary::-webkit-details-marker
         text-transform: uppercase
         color: #232323
         margin-bottom: 16px
+        padding-left: 2px
     &-link
         font-size: 14px
         line-height: 28px
         font-weight: 400
         color: #4e4e4e
         display: block
+        padding-left: 7px
         &:hover
             color: $colorSelectSite
 
 .search
-    &__block
-        display: flex
+    display: flex
     &__input
         width: 317px
         padding-left: 16px
@@ -165,6 +165,8 @@ summary::-webkit-details-marker
     &:hover .cart__box
         display: flex
         flex-direction: column
+    &__title
+        cursor: pointer
     &__box
         position: absolute
         left: -14px
@@ -173,102 +175,100 @@ summary::-webkit-details-marker
         background-color: #ffffff
         border-radius: 5px
         padding: 4px 18px
-        display: none
-        // &::before
-        //     display: block
-        //     content: ""
-
-.total
-    display: flex
-    justify-content: space-between
-    margin-top: 19px
-    font-size: 16px
-    font-weight: 700
-    letter-spacing: normal
-    text-transform: uppercase
-    color: #222222
-
-.link__block
-    display: flex
-    flex-direction: column
-    gap: 11px
-    margin-top: 32px
-    margin-bottom: 16px
-    &_checkout
-        border: 1px solid #f16d7f
-        font-size: 14px
-        font-weight: 700
-        letter-spacing: normal
-        text-transform: uppercase
-        color: #f16d7f
-        padding: 19px 74px
-    &_cart
-        padding: 20px 70px
-        background-color: #ffffff
-        border: 1px solid #eaeaea
-        font-size: 14px
-        font-weight: 700
-        letter-spacing: normal
-        text-transform: uppercase
-        color: #4a4a4a
-
-.small-card
-    display: flex
-    align-items: center
-    border-bottom: 1px solid rgba(237,237,237,0.74)
-    padding-bottom: 16px
-    padding-top: 16px
-    &__desc
-        margin-left: 14px
-    &__name
-        margin-bottom: 10px
-        font-size: 12px
+        z-index: 1
+    &__card
+        display: flex
+        align-items: center
+        border-bottom: 1px solid rgba(237,237,237,0.74)
+        padding-bottom: 16px
+        padding-top: 16px
+        &_desc
+            margin-left: 14px
+        &_name
+            margin-bottom: 10px
+            font-size: 12px
+            font-weight: 700
+            letter-spacing: normal
+            text-transform: uppercase
+            color: #222222
+        &_stars
+            margin-bottom: 12px
+            font-size: 12px
+            font-weight: 400
+            letter-spacing: normal
+            text-transform: uppercase
+            color: #e4af48
+        &_subtotal
+            font-size: 12px
+            font-weight: 400
+            letter-spacing: normal
+            text-transform: uppercase
+            color: $colorSelectSite
+        &_remove
+            margin-left: 50px
+            font-size: 16px
+            font-weight: 400
+            text-transform: uppercase
+            color: #c0c0c0
+    &__total
+        display: flex
+        justify-content: space-between
+        margin-top: 19px
+        font-size: 16px
         font-weight: 700
         letter-spacing: normal
         text-transform: uppercase
         color: #222222
-    &__stars
-        margin-bottom: 12px
-        font-size: 12px
-        font-weight: 400
-        letter-spacing: normal
-        text-transform: uppercase
-        color: #e4af48
-    &__subtotal
-        font-size: 12px
-        font-weight: 400
-        letter-spacing: normal
-        text-transform: uppercase
-        color: #f16d7f
-    &__remove
-        margin-left: 50px
-        font-size: 16px
-        font-weight: 400
-        text-transform: uppercase
-        color: #c0c0c0
+    &__link
+        display: flex
+        flex-direction: column
+        gap: 11px
+        margin-top: 32px
+        margin-bottom: 16px
+        &_checkout
+            border: 1px solid $colorSelectSite
+            font-size: 14px
+            font-weight: 700
+            letter-spacing: normal
+            text-transform: uppercase
+            color: $colorSelectSite
+            padding: 19px 74px
+            &:hover
+                background-color: $colorSelectSite
+                color: #ffffff
+        &_cart
+            padding: 20px 70px
+            background-color: #ffffff
+            border: 1px solid #eaeaea
+            font-size: 14px
+            font-weight: 700
+            letter-spacing: normal
+            text-transform: uppercase
+            color: #4a4a4a
+            &:hover
+                background-color: #4a4a4a
+                color: #ffffff
 
 .account__button
-    padding: 8px 12px
+    width: 130px
     background-color: $colorSelectSite
     display: flex
     justify-content: center
     align-items: center
     gap: 8px
     border: 1px solid transparent
-    & p
+    p
         font-size: 15px
         line-height: 32px
         font-weight: 400
         color: #ffffff
-    & i
+    i
         font-size: 14px
         color: #ffffff
     &:hover
         background-color: #fff
         border: 1px solid $colorSelectSite
-        & p
-            color: $colorSelectSite
-        & i
+        p, i
             color: $colorSelectSite
 
 .menu
@@ -277,8 +277,17 @@ summary::-webkit-details-marker
     list-style-type: none
     &__list
         position: relative
+        &:hover
+            border-bottom: 3px solid $colorSelectSite
     &__list:hover .mega-box
         display: flex
+    &__link
+        display: block
+        padding: 20px 25px
+        font-size: 14px
+        font-weight: 700
+        text-transform: uppercase
+        color: #222222
 
 .last:hover .mega-box
     right: 0
@@ -287,14 +296,6 @@ summary::-webkit-details-marker
 .last:hover .mega-box:before
     right: 49px
     left: auto
-
-.menu__link
-    display: block
-    padding: 20px 25px
-    font-size: 14px
-    font-weight: 700
-    text-transform: uppercase
-    color: #222222
 
 .mega-box
     background-color: #ffffff
@@ -316,30 +317,54 @@ summary::-webkit-details-marker
         transform: rotate(45deg)
         border-top: 1px solid #e8e8e8
         border-left: 1px solid #e8e8e8
-
-.mega-list
-    margin-right: 46px
-    &:last-of-type
-        margin-right: 0
-
-.mega-title
-    width: 235px
-    border-bottom: 1px solid #e8e8e8
-    font-size: 14px
-    line-height: 32px
-    font-weight: 400
-    text-transform: uppercase
-    color: #232323
-    margin-bottom: 16px
-
-.mega-link
-    font-size: 14px
-    line-height: 28px
-    font-weight: 400
-    color: #646464
-    display: block
-    &:hover
-        color: $colorSelectSite
+    &-women
+        left: -137px
+        &::before
+            left: 208px
+    &-kids
+        left: -261px
+        &::before
+            left: 314px
+    &-acc
+        left: -354px
+        &::before
+            left: 441px
+    &-feat
+        right: -125px
+        &::before
+            left: auto
+            right: 161px
+    &-deals
+        right: 0
+        &::before
+            left: auto
+            right: 23px
+    &__list
+        margin-right: 46px
+        &:last-of-type
+            margin-right: 0
+    &__title
+        width: 235px
+        border-bottom: 1px solid #e8e8e8
+        font-size: 14px
+        line-height: 32px
+        font-weight: 400
+        text-transform: uppercase
+        color: #232323
+        margin-bottom: 16px
+    &__link
+        font-size: 14px
+        line-height: 28px
+        font-weight: 400
+        color: #646464
+        display: block
+        &:hover
+            color: $colorSelectSite
+    &__img
+        transition: box-shadow .2s
+        &:hover
+            cursor: pointer
+            box-shadow: 0px 0px 20px 4px rgba(241, 109, 127, 1)
 
 .banner
     height: 613px

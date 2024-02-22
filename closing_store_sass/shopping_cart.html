@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
     <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/checkout.css">
+    <link rel="stylesheet" href="./styles/shopping_cart.css">
 </head>
 
 <body>
@@ -329,62 +329,158 @@
         </nav>
     </div>
 
-    <main class="main">
-        <div class="checkout container">
-            <details class="checkout__list" open>
-                <summary class="checkout__summary">01. SHIPPING ADDRESS</summary>
-                <div class="checkout__ship-add_left">
-                    <div class="checkout__content-guest">
-						<p class="checkout__content-guest-title">Check as a guest or register</p>
-						<p class="checkout__content-guest-text">Register with us for future convenience</p>
-						<form action="#" class="form__guest">
-							<div class="form__guest-wrapper">
-								<input class="form__guest-input" type="radio" name="check" id="guest">
-								<label class="form__guest-label" for="guest">checkout as guest</label>
-							</div>
-							<div class="form__guest-wrapper">
-								<input class="form__guest-input" type="radio" name="check" id="register">
-								<label class="form__guest-label" for="register">register</label>
-							</div>
-							<p class="checkout__content-guest-title">register and save time!</p>
-							<p class="checkout__content-guest-text">Register with us for future convenience</p>
-							<a href="#" class="form__guest-link">Fast and easy checkout</a>
-							<a href="#" class="form__guest-link">Easy access to your order history and status</a>
-							<button type="submit" class="form__guest-btn">Continue</button>
-						</form>
-					</div>
+    <section class="basket">
+        <div class="container">
+            <div class="cart__wrapper">
+                <div class="cart__title cart__title-left">
+                    <p class="cart__column cart__column-width">Product Details</p>
+    
                 </div>
-                <div class="checkout__ship-add_right">
-                    <h4 class="checkout__content-registed-title">Already registed?</h4>
-                    <p class="checkout__content-registed-text">Please log in below</p>
-                    <form action="#" class="form__registed">
-                        <p class="form__registed-info">EMAIL ADDRESS<sup><span>*</span></sup></p>
-                        <input type="email" name="email" class="form__registed-input" required>
-                        <p class="form__registed-info">PASSWORD<sup><span>*</span></sup></p>
-                        <input type="password" name="password" class="form__registed-input" required>
-                        <p class="form__registed-required">* Required Fileds</p>
-                        <button type="submit" class="form__registed-btn">Log in</button>
-                        <a href="#" class="form__registed-link">Forgot Password ?</a>
+                <div class="cart__title cart__title-right">
+                    <p class="cart__column">unite Price</p>
+                    <p class="cart__column">Quantity</p>
+                    <p class="cart__column">shipping</p>
+                    <p class="cart__column">Subtotal</p>
+                    <p class="cart__column">ACTION</p>
+                </div>
+            </div>
+    
+    
+            <div class="cart__item">
+                <div class="cart__product">
+                    <div class="cart__info">
+                        <img src="img/cart1.jpg" alt="cart1" class="card__img">
+                    </div>
+                    <div class="cart__description">
+                        <p class="cart__description-title">Mango People T-shirt</p>
+                        <p class="cart__description-text">Color:<span>Red</span></p>
+                        <p class="cart__description-text">Size:<span>Xll</span></p>
+                    </div>
+                </div>
+                <div class="cart__data">
+                    <div class="cart__price">
+                        $150
+                    </div>
+                    <div class="cart__quantity">
+                        <input type="number" class="cart__quantity-data" value="2" max="99">
+                    </div>
+                    <div class="cart__shipping">
+                        FREE
+                    </div>
+                    <div class="cart__subtotal">
+                        $300
+                    </div>
+                    <div class="cart__action">
+                        <a href="javascript:void(0);" class="cart__action-link"><i class="fa fa-times-circle"
+                                aria-hidden="true"></i></a>
+    
+                    </div>
+                </div>
+            </div>
+    
+            <div class="cart__item">
+                <div class="cart__product">
+                    <div class="cart__info">
+                        <img src="img/cart2.jpg" alt="cart2" class="card__img">
+                    </div>
+                    <div class="cart__description">
+                        <p class="cart__description-title">Mango People T-shirt</p>
+                        <p class="cart__description-text">Color:<span>Red</span></p>
+                        <p class="cart__description-text">Size:<span>Xll</span></p>
+                    </div>
+                </div>
+                <div class="cart__data">
+                    <div class="cart__price">
+                        $150
+                    </div>
+                    <div class="cart__quantity">
+                        <input type="number" class="cart__quantity-data" value="2" max="99">
+                    </div>
+                    <div class="cart__shipping">
+                        FREE
+                    </div>
+                    <div class="cart__subtotal">
+                        $300
+                    </div>
+                    <div class="cart__action">
+                        <a href="javascript:void(0);" class="cart__action-link"><i class="fa fa-times-circle"
+                                aria-hidden="true"></i></a>
+    
+                    </div>
+                </div>
+            </div>
+    
+            <div class="cart__item">
+                <div class="cart__product">
+                    <div class="cart__info">
+                        <img src="img/cart3.jpg" alt="cart3" class="card__img">
+                    </div>
+                    <div class="cart__description">
+                        <p class="cart__description-title">Mango People T-shirt</p>
+                        <p class="cart__description-text">Color:<span>Red</span></p>
+                        <p class="cart__description-text">Size:<span>Xll</span></p>
+                    </div>
+                </div>
+                <div class="cart__data">
+                    <div class="cart__price">
+                        $150
+                    </div>
+                    <div class="cart__quantity">
+                        <input type="number" class="cart__quantity-data" value="2" max="99">
+                    </div>
+                    <div class="cart__shipping">
+                        FREE
+                    </div>
+                    <div class="cart__subtotal">
+                        $300
+                    </div>
+                    <div class="cart__action">
+                        <a href="javascript:void(0);" class="cart__action-link"><i class="fa fa-times-circle"
+                                aria-hidden="true"></i></a>
+    
+                    </div>
+                </div>
+            </div>
+    
+            <div class="cart__buttons">
+                <div class="cart__button">cLEAR SHOPPING CART</div>
+                <div class="cart__button">cONTINUE sHOPPING</div>
+            </div>
+    
+            <div class="cart__information">
+                <div class="cart__adress">
+                    <p class="cart__adress-title">Shipping Adress</p>
+                    <form action="#" class="cart__adress-form">
+                        <select class="cart__adress-form-country" name="country">
+                            <option class="cart__adress-form-country-option" value="Bangladesh">Bangladesh</option>
+                            <option class="cart__adress-form-country-option" value="Russian Federation">Russian
+                                Federation</option>
+                            <option class="cart__adress-form-country-option" value="Chile">Chile</option>
+                            <option class="cart__adress-form-country-option" value="Egypt">Egypt</option>
+                        </select>
+    
+                        <input type="text" class="cart__adress-form-text" placeholder="State">
+                        <input type="text" class="cart__adress-form-text" placeholder="Postcode / Zip">
+                        <button type="submit" class="cart__adress-form-btn">get a quote</button>
                     </form>
                 </div>
-            </details>
-            <details class="checkout__list">
-                <summary class="checkout__summary">02. BILLING INFORMATION</summary>
-            </details>
-            <details class="checkout__list">
-                <summary class="checkout__summary">03. SHIPPING INFORMATION</summary>
-            </details>
-            <details class="checkout__list">
-                <summary class="checkout__summary">04. SHIPPING METHOD</summary>
-            </details>
-            <details class="checkout__list">
-                <summary class="checkout__summary">05. PAYMENT METHOD</summary>
-            </details>
-            <details class="checkout__list">
-                <summary class="checkout__summary">06. ORDER REVIEW</summary>
-            </details>
+                <div class="cart__discount">
+                    <p class="cart__adress-title">coupon discount</p>
+                    <p class="cart__discount-subtitle">Enter your coupon code if you have one</p>
+                    <form action="#" class="cart__discount-form">
+                        <input type="text" class="cart__discount-form-text" placeholder="State">
+                        <button type="submit" class="cart__discount-form-btn">Apply coupon</button>
+                    </form>
+                </div>
+                <div class="cart__total">
+                    <p class="cart__total-suptitle">Sub total <span> $900</span></p>
+                    <p class="cart__total-title">GRAND TOTAL <span>$900</span> </p>
+                    <a href="javascript:void(0);" class="cart__total-btn">proceed to checkout</a>
+    
+                </div>
+            </div>
         </div>
-    </main>
+    </section>
 
     <section class="feedback">
         <div class="feedback__background">

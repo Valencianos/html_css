@@ -1,71 +1,202 @@
-* {
-  padding: 0px;
-  margin: 0px;
-  border: 0px;
+.top__head {
+  background-color: #f8f3f4;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top__head_heading {
+  font-size: 24px;
+  line-height: 20px;
+  font-weight: 900;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  color: #f16d7f;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+.breadcrumbs__link {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  color: #636363;
+}
+.breadcrumbs__link:hover {
+  color: #F16D7F;
+}
+.breadcrumbs__link_site {
+  font-weight: 700;
+  color: #F16D7F;
 }
 
-html,
-body {
-  height: 100%;
-  min-width: 320px;
+.checkout__list {
+  margin-top: 33px;
+  display: flex;
+}
+.checkout__list:last-child {
+  margin-bottom: 93px;
 }
 
-body {
-  color: #fff;
-  line-height: 1;
-  font-size: 1rem;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-input,
-button,
-textarea {
-  font-size: inherit;
-}
-
-button {
+.checkout__summary {
+  font-size: 16px;
+  font-weight: bold;
+  color: #222222;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 30px;
+  transition: color 0.2s;
   cursor: pointer;
-  color: inherit;
-  background-color: inherit;
+}
+.checkout__summary span {
+  margin-right: 10px;
+}
+.checkout__summary.active {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.checkout__summary.active ~ .checkout__content {
+  display: flex;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.checkout__summary-guest {
+  flex-basis: 48%;
+  margin-left: 35px;
+}
+.checkout__summary-guest-title {
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #222222;
+  margin-top: 24px;
+  margin-bottom: 15px;
+}
+.checkout__summary-guest-text {
+  font-size: 13px;
+  line-height: 1.54;
+  text-align: left;
+  color: #b3b2b2;
+  margin-bottom: 34px;
+}
+.checkout__summary-registed-title {
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #222222;
+  margin-top: 33px;
+  margin-bottom: 15px;
+}
+.checkout__summary-registed-text {
+  font-size: 13px;
+  line-height: 1.54;
+  text-align: left;
+  color: #b3b2b2;
+  margin-bottom: 27px;
 }
 
-a {
-  color: inherit;
+.form__guest-wrapper {
+  display: flex;
+  margin-bottom: 19px;
 }
 
-a:link,
-a:visited {
+.form__guest-input {
+  cursor: pointer;
+  align-self: center;
+}
+
+.form__guest-label {
+  margin-left: 14px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #222222;
+  cursor: pointer;
+}
+
+.form__guest-btn {
+  margin-top: 38px;
+  padding: 19px 54px;
+  border: solid 1px #eaeaea;
+  font-size: 14px;
+  font-weight: bold;
+  color: #4a4a4a;
+  text-transform: uppercase;
+  background-color: #fff;
+  transition: color 0.2s;
+  transition: background-color 0.2s;
+  transition: transform 1.5s;
+  cursor: pointer;
+}
+.form__guest-btn:hover {
+  transform: rotate(360deg);
+  background-color: #f16d7f;
+  color: #fff;
+}
+
+.form__guest-link {
+  display: block;
   text-decoration: none;
+  font-size: 13px;
+  line-height: 1.54;
+  color: #b3b2b2;
+  transition: color 0.2s;
+}
+.form__guest-link::before {
+  content: "\f101";
+  font-family: "fontAwesome";
+  margin-right: 8px;
+}
+.form__guest-link:hover {
+  color: #f16d7f;
 }
 
-a:hover {
+.form__registed-info {
+  font-size: 12px;
+  color: #222222;
+  margin-bottom: 16px;
+}
+.form__registed-info sup {
+  vertical-align: baseline;
+}
+.form__registed-info span {
+  color: #ff0d0d;
+  font-size: 17px;
+}
+
+.form__registed-input {
+  width: 390px;
+  margin-bottom: 23px;
+  border: solid 1px #eaeaea;
+  padding: 14px;
+}
+
+.form__registed-required {
+  font-size: 13px;
+  color: #ff0d0d;
+  margin-bottom: 32px;
+}
+
+.form__registed-btn {
+  border: solid 1px #eaeaea;
+  background-color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  color: #4a4a4a;
+  padding: 20px 55px;
+  margin-right: 32px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.form__registed-btn:hover {
+  color: #fff;
+  background-color: #f16d7f;
+}
+
+.form__registed-link {
   text-decoration: none;
+  font-size: 14px;
+  color: #222222;
+  transition: color 0.2s;
 }
-
-ul li {
-  list-style: none;
-}
-
-img {
-  vertical-align: top;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: inherit;
-  font-size: inherit;
+.form__registed-link:hover {
+  color: #f16d7f;
 }/*# sourceMappingURL=checkout.css.map */
