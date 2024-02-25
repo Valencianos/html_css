@@ -333,39 +333,41 @@
         <div class="checkout container">
             <details class="checkout__list" open>
                 <summary class="checkout__summary">01. SHIPPING ADDRESS</summary>
-                <div class="checkout__ship-add_left">
-                    <div class="checkout__content-guest">
-						<p class="checkout__content-guest-title">Check as a guest or register</p>
-						<p class="checkout__content-guest-text">Register with us for future convenience</p>
-						<form action="#" class="form__guest">
-							<div class="form__guest-wrapper">
-								<input class="form__guest-input" type="radio" name="check" id="guest">
-								<label class="form__guest-label" for="guest">checkout as guest</label>
-							</div>
-							<div class="form__guest-wrapper">
-								<input class="form__guest-input" type="radio" name="check" id="register">
-								<label class="form__guest-label" for="register">register</label>
-							</div>
-							<p class="checkout__content-guest-title">register and save time!</p>
-							<p class="checkout__content-guest-text">Register with us for future convenience</p>
-							<a href="#" class="form__guest-link">Fast and easy checkout</a>
-							<a href="#" class="form__guest-link">Easy access to your order history and status</a>
-							<button type="submit" class="form__guest-btn">Continue</button>
-						</form>
-					</div>
-                </div>
-                <div class="checkout__ship-add_right">
-                    <h4 class="checkout__content-registed-title">Already registed?</h4>
-                    <p class="checkout__content-registed-text">Please log in below</p>
-                    <form action="#" class="form__registed">
-                        <p class="form__registed-info">EMAIL ADDRESS<sup><span>*</span></sup></p>
-                        <input type="email" name="email" class="form__registed-input" required>
-                        <p class="form__registed-info">PASSWORD<sup><span>*</span></sup></p>
-                        <input type="password" name="password" class="form__registed-input" required>
-                        <p class="form__registed-required">* Required Fileds</p>
-                        <button type="submit" class="form__registed-btn">Log in</button>
-                        <a href="#" class="form__registed-link">Forgot Password ?</a>
-                    </form>
+                <div class="checkout__content">
+                    <div class="checkout__content_left">
+                        <div class="checkout__content-guest">
+                            <p class="checkout__content_guest-title">Check as a guest or register</p>
+                            <p class="checkout__content_guest-text">Register with us for future convenience</p>
+                            <form action="#" class="form__guest">
+                                <div class="form__guest-box">
+                                    <input class="form__guest-input" type="radio" name="check" id="guest">
+                                    <label class="form__guest-label" for="guest">checkout as guest</label>
+                                </div>
+                                <div class="form__guest-box">
+                                    <input class="form__guest-input" type="radio" name="check" id="register">
+                                    <label class="form__guest-label" for="register">register</label>
+                                </div>
+                                <p class="checkout__content_guest-title">register and save time!</p>
+                                <p class="checkout__content_guest-text">Register with us for future convenience</p>
+                                <a href="#" class="form__guest-link">Fast and easy checkout</a>
+                                <a href="#" class="form__guest-link">Easy access to your order history and status</a>
+                                <button type="submit" class="form__guest-btn">Continue</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="checkout__content_right">
+                        <p class="checkout__content_guest-title">Already registed?</p>
+                        <p class="checkout__content_guest-text">Please log in below</p>
+                        <form action="#" class="form__registed">
+                            <p class="form__registed-info">EMAIL ADDRESS<sup><span>*</span></sup></p>
+                            <input type="email" name="email" class="form__registed-input" required>
+                            <p class="form__registed-info">PASSWORD<sup><span>*</span></sup></p>
+                            <input type="password" name="password" class="form__registed-input" required>
+                            <p class="form__registed-required">* Required Fileds</p>
+                            <button type="submit" class="form__registed-btn">Log in</button>
+                            <a href="#" class="form__registed-link">Forgot Password ?</a>
+                        </form>
+                    </div>
                 </div>
             </details>
             <details class="checkout__list">
