@@ -10683,9 +10683,6 @@ summary::-webkit-details-marker {
 .menu__list {
   position: relative;
 }
-.menu__list:hover {
-  border-bottom: 3px solid #F16D7F;
-}
 .menu__list:hover .mega-box {
   display: flex;
 }
