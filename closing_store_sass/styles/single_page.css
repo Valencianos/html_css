@@ -1,0 +1,117 @@
+.top__head {
+  background-color: #f8f3f4;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top__head_heading {
+  font-size: 24px;
+  line-height: 20px;
+  font-weight: 900;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  color: #f16d7f;
+}
+
+.breadcrumbs__link {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  color: #636363;
+}
+.breadcrumbs__link_site {
+  font-weight: 700;
+  color: #F16D7F;
+}
+
+.product__image {
+  padding-top: 11px;
+  background-color: #f7f7f7;
+  border: 1px solid #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 42px;
+}
+.product__dscr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+}
+
+.item__collection {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #f16d7f;
+  margin-top: 73px;
+}
+
+.item__title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #4d4d4d;
+  margin-top: 17px;
+}
+
+.item__dsc {
+  width: 618px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  color: #5e5e5e;
+  margin-top: 67px;
+}
+
+.item__details {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #b9b9b9;
+  display: flex;
+  gap: 44px;
+  margin-top: 28px;
+}
+
+.item__price {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ef5b70;
+  margin-top: 37px;
+}
+
+.item__options {
+  display: flex;
+  gap: 53px;
+  margin-top: 63px;
+}
+
+.red-line {
+  width: 63px;
+  height: 3px;
+  background-color: #ef5b70;
+  margin-top: 14px;
+}
+
+.grey-line {
+  width: 642px;
+  height: 1px;
+  background-color: #eaeaea;
+  margin-top: 43px;
+}
+
+.color_choice {
+  width: 12px;
+  height: 12px;
+  color: #ef5b70;
+}/*# sourceMappingURL=single_page.css.map */

@@ -1,0 +1,174 @@
+@import "_vars"
+
+.top__head
+    background-color: #f8f3f4
+    padding-top: 64px
+    padding-bottom: 64px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &_heading
+        font-size: 24px
+        line-height: 20px
+        font-weight: 900
+        letter-spacing: normal
+        text-transform: uppercase
+        color: #f16d7f
+
+.breadcrumbs
+    &__link
+        font-size: 14px
+        line-height: 20px
+        font-weight: 300
+        letter-spacing: normal
+        text-transform: uppercase
+        color: #636363
+        &:hover
+            color: $colorSelectSite
+        &_site
+            font-weight: 700
+            color: $colorSelectSite
+
+.filter-product
+    margin-top: 60px
+    display: flex
+    gap: 60px
+
+.filter
+    width: 243px
+    &__summary
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 14px 12px
+        border-bottom: 1px solid #ebebeb
+        border-left: 5px solid $colorSelectSite
+    &__heading
+        font-size: 14px
+        line-height: 20px
+        font-weight: 700
+        text-transform: uppercase
+        color: #6f6e6e
+    &[open] .filter__heading
+        color: $colorSelectSite
+    &[open] i
+        color: $colorSelectSite
+    &__links-box
+        display: flex
+        flex-direction: column
+        padding: 22px 17px
+    &__links
+        font-size: 14px
+        line-height: 33px
+        font-weight: 400
+        letter-spacing: normal
+        color: #6f6e6e
+        &:hover
+            color: $colorSelectSite
+
+.sort
+    display: flex
+    gap: 30px
+    justify-content: space-between
+    &__content
+        width: 263px
+    &__title
+        font-size: 14px
+        line-height: 20px
+        font-weight: 700
+        text-transform: uppercase
+        color: #6f6e6e
+        margin-bottom: 24px
+    &__radio
+        display: none
+        &:checked + .sort__radio-label
+            color: $colorSelectSite
+        &-label
+            font-size: 14px
+            line-height: 26px
+            font-weight: 400
+            color: #6f6e6e
+            cursor: pointer
+            &:hover
+                color: $colorSelectSite
+            &:not(:last-child):after
+                content: "|"
+                margin-left: 5px
+                margin-right: 5px
+                color: #636363
+
+.size
+    &__check
+        cursor: pointer
+        &:hover + .size__check-label
+            color: $colorSelectSite
+        &:checked + .size__check-label
+            color: $colorSelectSite
+        &-label
+            margin-left: 5px
+            font-size: 14px
+            line-height: 20px
+            font-weight: 400
+            color: #6f6e6e
+            text-transform: uppercase
+            cursor: pointer
+            &:hover
+                color: $colorSelectSite
+            &:not(:last-child)
+                margin-right: 23px
+
+.price__box
+    font-size: 14px
+    line-height: 26px
+    font-weight: 400
+    color: #6f6e6e
+
+.option
+    display: flex
+    margin-top: 41px
+    padding: 10px 0 10px 10px
+    background-color: #f3f3f3
+    margin-bottom: 48px
+    &__title
+        padding: 7px 13px
+        font-size: 14px
+        color: #6f6e6e
+        border: solid 1px #ebebeb
+        background-color: #fff
+    &__select
+        padding: 7px 13px
+        font-size: 14px
+        color: #6f6e6e
+        border: solid 1px #ebebeb
+        background-color: #fff
+        &:not(:last-child)
+            margin-right: 10px
+
+.product-box
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 30px
+
+.bonus
+    background-color: #222224
+    &__box
+        display: flex
+    &__content
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        padding: 89px 30px 115px 30px
+        &-title
+            margin-top: 32px
+            font-size: 20px
+            line-height: 1.2
+            font-weight: 700
+            color: #fbfbfb
+        &-text
+            font-size: 14px
+            line-height: 23px
+            font-weight: 300
+            color: #fbfbfb
+            margin-top: 21px
+            text-align: center
