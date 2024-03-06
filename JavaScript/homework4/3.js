@@ -14,4 +14,30 @@
 не окажется, значит нужно будет вывести пустой массив.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+const array = [];
+for (let i = 0; i < 5; i++) {
+    array.push(Math.floor(Math.random() * 10))
+}
+console.log(array);
+
+let sum = 0;
+array.forEach(element => {
+    sum += element;
+})
+console.log(sum);
+
+let min = 9;
+array.forEach(element => {
+    if (element < min) {
+        min = element;
+    }
+});
+console.log(min);
+
+let array2 = [];
+for (let i = 0; i < array.length; i++) {
+    if(array[i] === 3) {
+        array2.push(i);
+    }
+}
+console.log(array2);
