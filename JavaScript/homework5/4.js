@@ -31,4 +31,10 @@ const products = [
   },
 ];
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+console.log(products.filter(element => 'photos' in element && element.photos.length !== 0));
+
+
+function byPrice(fieldName){
+  return (a, b) => a[fieldName] > b[fieldName] ? 1 : -1;
+}
+console.log(products.sort(byPrice('price')));
