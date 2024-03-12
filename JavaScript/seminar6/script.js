@@ -1,3 +1,7 @@
+// Получите ссылку на первый абзац из дива с id, равным block, выведите его в консоль
+// Получите ссылку на первый абзац с классом www. и вывести его в консоль
+
+
 const blockEl = document.querySelector('#block');
 console.log(blockEl);
 const paragraphEl = document.querySelector('.www');
