@@ -28,7 +28,7 @@ dd.insertAdjacentHTML("afterend", `<a href="#">link</a>`);
 // 5. У элемента с id "dropdownMenuButton" замените id на "superDropdown".
 
 const ddMB = document.querySelector('#dropdownMenuButton');
-ddMB.setAttribute('id', 'superDropdown');
+ddMB.id = 'superDropdown';
 
 // 6. Добавьте атрибут data-dd со значением 3 элементу у которого существует атрибут "aria-labelledby" равный "dropdownMenuButton" используя dataset.
 
