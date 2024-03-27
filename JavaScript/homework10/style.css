@@ -1,0 +1,16 @@
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: navy;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 1.5;
+
+  .wrapper {
+    border: 1px solid navy;
+    padding: 12px;
+    width: 300px;
+    text-align: center;
+    background-color: khaki;
+  }
+}
