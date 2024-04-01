@@ -24,6 +24,7 @@ img {
 .container {
   margin-top: 319px;
   margin-left: 230px;
+  margin-bottom: 200px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -32,9 +33,9 @@ img {
 .card {
   display: flex;
   gap: 31px;
-  width: 652px;
-  height: 306px;
+  max-width: 652px;
   box-shadow: 17px 19px 24px 0 rgba(0, 0, 0, 0.13);
+  position: relative;
 }
 .card__pic {
 }
@@ -47,13 +48,18 @@ img {
   font-weight: 400;
   font-size: 22px;
   color: #575757;
-
 }
 
 .card__title {
   margin-bottom: 42px;
   font-size: 24px;
   color: #222;
+}
+
+.card-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .card__price {
@@ -71,6 +77,22 @@ img {
 .card__size_select {
   color: #6f6e6e;
 }
-.card__quantity {
+.card__quantity_select {
+  width: 44px;
+  height: 24px;
+  border: 1px solid #EAEAEA;
+  text-align: right;
+  font-weight: 400;
+  font-size: 18px;
+  color: #656565;
+}
 
+.card__close {
+  position: absolute;
+  top: 28px;
+  right: 22px;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
