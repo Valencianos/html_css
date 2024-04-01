@@ -6,11 +6,15 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    box-sizing: border-box;
 }
 
 body {
-    scroll-behavior: smooth;
-    background: #fff;
+  scroll-behavior: smooth;
+  background: #fff;
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }
 
 img {
@@ -18,13 +22,17 @@ img {
     max-width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6, button, p, ul {
-    color: $backSiteColor;
-    font-family: Lato;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+h1, h2, h3, h4, h5, h6, p, ul {
+  color: $backSiteColor;
+  font-size: 14px;
+  line-height: normal;
+}
+
+button {
+  background: none;
+	border: none;
+	cursor: pointer;
+	outline: none;
 }
 
 .container {
@@ -33,57 +41,55 @@ h1, h2, h3, h4, h5, h6, button, p, ul {
 }
 
 .header {
-    background: #222;
+    background: $backSiteColor;
+    padding: 19px 0;
 }
 
 .navigation {
     display: flex;
     justify-content: space-between;
-    padding: 19px 0;
-
     &__left {
         display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        gap: 41px;
+        align-items: center;
+        gap: 40px;
     }
     &__right {
         display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        gap: 41px;
+        gap: 32px;
         position: relative;
     }
-}
-
-.bttn {
-    border: none;
-    background: none;
-    cursor: pointer;
-    fill: #E8E8E8;
-}
-
-.items-in-basket {
-    background-color: $colorSelectSite;
-    width: 19px;
-    height: 19px;
-    border-radius: 10px 10px 10px 10px;
-    text-align: center;
-    position: absolute;
-    top: 0;
-    right: 0;
+    &__icon svg {
+      fill: #E8E8E8;
+    }
+    &__icon:hover svg {
+      fill: $colorSelectSite;
+    }
+    &__counter {
+      background-color: $colorSelectSite;
+      width: 20px;
+      height: 20px;
+      border-radius: 10px 10px 10px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 12px;
+      position: absolute;
+      top: -5px;
+      right: -9px;
+    }
 }
 
 .main {
     background-color: #F1E4E6;
-    margin: 0 auto;
+    margin-bottom: 65px;
     position: relative;
     &__content {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 63px;
-        justify-content: center;
+        display: flex;
+        gap: 60px;
         align-items: center;
+        max-width: 1600px;
+        margin: 0 auto;
     }
     &__text {
         border-left: 12px solid $colorSelectSite;
@@ -100,30 +106,35 @@ h1, h2, h3, h4, h5, h6, button, p, ul {
 }
 
 .menu {
-    &__active-all {
+    &__active {
         width: 232px;
         background: #FFF;
         position: absolute;
         top: 0;
         right: 0;
-        padding: 32px 0;
+        padding: 32px 32px 12px 32px;
         display: flex;
         flex-direction: column;
     }
     &__heading {
         font-weight: 700;
         color: $colorText;
-        padding-left: 33px;
+        margin-bottom: 24px;
     }
     &__text {
         color: $colorSelectSite;
-        padding-top: 20px;
-        padding-left: 32px;
+        margin-bottom: 12px;
     }
     &__list {
-        color: #6F6E6E;
-        padding-top: 11px;
-        padding-left: 53px;
+      display: flex;
+      flex-direction: column;
+      padding-left: 21px;
+      gap: 11px;
+      margin-bottom: 20px;
+    }
+    &__item {
+      cursor: pointer;
+      color: #6F6E6E;
     }
 }
 

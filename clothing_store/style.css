@@ -3,11 +3,15 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 body {
   scroll-behavior: smooth;
   background: #fff;
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }
 
 img {
@@ -15,13 +19,17 @@ img {
   max-width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6, button, p, ul {
+h1, h2, h3, h4, h5, h6, p, ul {
   color: #222;
-  font-family: Lato;
   font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
   line-height: normal;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
 
 .container {
@@ -31,56 +39,55 @@ h1, h2, h3, h4, h5, h6, button, p, ul {
 
 .header {
   background: #222;
+  padding: 19px 0;
 }
 
 .navigation {
   display: flex;
   justify-content: space-between;
-  padding: 19px 0;
 }
 .navigation__left {
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 41px;
+  align-items: center;
+  gap: 40px;
 }
 .navigation__right {
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 41px;
+  gap: 32px;
   position: relative;
 }
-
-.bttn {
-  border: none;
-  background: none;
-  cursor: pointer;
+.navigation__icon svg {
   fill: #E8E8E8;
 }
-
-.items-in-basket {
+.navigation__icon:hover svg {
+  fill: #F16D7F;
+}
+.navigation__counter {
   background-color: #F16D7F;
-  width: 19px;
-  height: 19px;
+  width: 20px;
+  height: 20px;
   border-radius: 10px 10px 10px 10px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 12px;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -5px;
+  right: -9px;
 }
 
 .main {
   background-color: #F1E4E6;
-  margin: 0 auto;
+  margin-bottom: 65px;
   position: relative;
 }
 .main__content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 63px;
-  justify-content: center;
+  display: flex;
+  gap: 60px;
   align-items: center;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 .main__text {
   border-left: 12px solid #F16D7F;
@@ -95,30 +102,35 @@ h1, h2, h3, h4, h5, h6, button, p, ul {
   font-weight: 700;
 }
 
-.menu__active-all {
+.menu__active {
   width: 232px;
   background: #FFF;
   position: absolute;
   top: 0;
   right: 0;
-  padding: 32px 0;
+  padding: 32px 32px 12px 32px;
   display: flex;
   flex-direction: column;
 }
 .menu__heading {
   font-weight: 700;
   color: #000;
-  padding-left: 33px;
+  margin-bottom: 24px;
 }
 .menu__text {
   color: #F16D7F;
-  padding-top: 20px;
-  padding-left: 32px;
+  margin-bottom: 12px;
 }
 .menu__list {
+  display: flex;
+  flex-direction: column;
+  padding-left: 21px;
+  gap: 11px;
+  margin-bottom: 20px;
+}
+.menu__item {
+  cursor: pointer;
   color: #6F6E6E;
-  padding-top: 11px;
-  padding-left: 53px;
 }
 
 .hide {
