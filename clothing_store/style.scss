@@ -148,54 +148,37 @@ li {
     list-style-type: none;
 }
 
-.category_choice {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 30px;
-    padding-top: 65px;
-}
-
-.category_1 {
-    background-image: url("./img/For_women.png");
+.category {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+  padding-top: 65px;
+  &__choice {
     height: 260px;
-}
-
-.category_2 {
-    background-image: url("./img/For_men.png");
-    height: 260px;
-}
-
-.category_3 {
-    background-image: url("./img/For_kids.png");
-    height: 260px;
-}
-
-.category_4 {
-    grid-column: span 3;
-    background-image: url("./img/Accessories.png");
-    height: 180px;
-}
-
-.cat_bg {
+    &_last {
+      grid-column: span 3;
+      height: 180px;
+    }
+  }
+  &__box {
     background-color: rgba(33, 22, 22, 0.70);
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.cat_bg h5 {
-    color: #FFF;
-    text-align: center;
-    font-size: 16px;
-}
-
-.cat_bg h4 {
-    color: $colorSelectSite;
-    font-size: 24px;
-    font-weight: 700;
+    &_title {
+      color: #FFF;
+      text-align: center;
+      font-size: 16px;
+    }
+    &_subtitle {
+      color: $colorSelectSite;
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
 }
 
 .featured {
@@ -222,127 +205,55 @@ li {
     margin-top: 48px;
 }
 
-.card-pic1 {
-    background-image: url(./img/sale_pic1.jpg);
+.card {
+  background-color: #f8f8f8;
+  &__img {
     background-size: cover;
     width: 360px;
     height: 420px;
-}
-
-.card-pic2 {
-    background-image: url(./img/Sale_pic2.png);
-    background-size: cover;
-    width: 360px;
-    height: 420px;
-}
-
-.card-pic3 {
-    background-image: url(./img/Sale_pic3.png);
-    background-size: cover;
-    width: 360px;
-    height: 420px;
-}
-
-.card-pic4 {
-    background-image: url(./img/Sale_pic4.png);
-    background-size: cover;
-    width: 360px;
-    height: 420px;
-}
-
-.card-pic5 {
-    background-image: url(./img/Sale_pic5.png);
-    background-size: cover;
-    width: 360px;
-    height: 420px;
-}
-
-.card-pic6 {
-    background-image: url(./img/Sale_pic6.png);
-    background-size: cover;
-    width: 360px;
-    height: 420px;
-}
-
-.card_dark {
+  }
+  &__dark {
     display: none;
     background-color: rgba(58, 56, 56, 0.86);
     height: 100%;
-}
-
-.card_button {
-    width: 139px;
-    height: 44px;
+  }
+  &__img:hover .card__dark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__button {
+    padding: 11px 16px 8px 13px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 11px;
     border: 1px solid #FFF;
     background: none;
-}
-
-.card_button p {
-    color: #FFF;
-}
-
-.card-pic1:hover .card_dark {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card-pic2:hover .card_dark {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card-pic3:hover .card_dark {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card-pic4:hover .card_dark {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card-pic5:hover .card_dark {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card-pic6:hover .card_dark {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card_text {
+    &_text {
+      color: #FFF;
+    }
+  }
+  &__text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     padding: 24px 16px;
-}
-
-.card_text h6 {
-    font-size: 13px;
-    padding-bottom: 14px;
-}
-
-.card_text p {
-    color: #5D5D5D;
-    font-weight: 300;
-    padding-bottom: 18px;
-}
-
-.card_text h5 {
-    color: $colorSelectSite;
-    font-size: 16px;
+    &_title {
+      font-size: 13px;
+      padding-bottom: 14px;
+    }
+    &_desc {
+      color: #5D5D5D;
+      font-weight: 300;
+      padding-bottom: 18px;
+    }
+    &_price {
+      color: $colorSelectSite;
+      font-size: 16px;
+    }
+  }
 }
 
 .links {
