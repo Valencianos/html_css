@@ -405,29 +405,29 @@ svg:hover {
   fill: #FFF;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1270px) {
   .container {
     max-width: 736px;
   }
-  .main_content {
+  .main__content {
     gap: 39px;
   }
-  .main_text {
+  .main__text {
     margin-left: 39px;
   }
-  .main_text h1 {
+  .main__text h1 {
     font-size: 44px;
   }
-  .main_text h2 {
+  .main__text h2 {
     font-size: 24px;
   }
-  .category_choice {
+  .category {
     gap: 19px;
   }
-  .category_1 category_2 category_3 {
+  .category__choice {
     height: 167px;
   }
-  .category_4 {
+  .category__choice_last {
     height: 116px;
   }
   .featured h3 {
@@ -483,39 +483,33 @@ svg:hover {
   .hidden {
     display: none;
   }
-  .main_content {
+  .main__content {
     height: 363px;
     display: flex;
   }
-  .main_text {
+  .main__text {
     flex-direction: column;
     padding-left: 15px;
   }
-  .main_text h1 {
+  .main__text h1 {
     font-size: 38px;
   }
-  .main_text h2 {
+  .main__text h2 {
     font-size: 20px;
   }
   .items-in-basket {
     display: none;
   }
-  .category_choice {
+  .category {
     display: flex;
     flex-direction: column;
     gap: 32px;
     padding-top: 64px;
   }
-  .category_1 {
+  .category__choice {
     height: 247px;
   }
-  .category_2 {
-    height: 247px;
-  }
-  .category_3 {
-    height: 247px;
-  }
-  .category_4 {
+  .category__choice_last {
     height: 111px;
     background-position: center;
     background-size: cover;
@@ -529,22 +523,7 @@ svg:hover {
     gap: 16px;
     margin-top: 64px;
   }
-  .card-pic1 {
-    width: 343px;
-  }
-  .card-pic2 {
-    width: 343px;
-  }
-  .card-pic3 {
-    width: 343px;
-  }
-  .card-pic4 {
-    width: 343px;
-  }
-  .card-pic5 {
-    width: 343px;
-  }
-  .card-pic6 {
+  .card_img {
     width: 343px;
   }
   .links {
