@@ -26,7 +26,7 @@ const cards = document.querySelector('.cards');
 data.forEach(element => {
   cards.insertAdjacentHTML('beforeend', 
   `
-  <div class="card">
+  <div class="card" data-id="${element.id}">
     <div class="card__img" style="background-image: url(${element.img})">
       <div class="card__dark">
         <button class="card__button">
@@ -44,22 +44,40 @@ data.forEach(element => {
   `)
 });
 
-const cartItems = document.querySelector('.cart__items');
-let cardButtonLength = document.querySelectorAll('.card__button').length;
-const cardButton = document.querySelectorAll('.card__button');
 
-function updateCart() {
-  const cartHTML = cart.map((item) => 
-  `
+
+const cartItems = document.querySelector('.cart__items');
+let cardButtonsLength = document.querySelectorAll('.card__button').length;
+const cardButtons = document.querySelectorAll('.card__button');
+
+let cart = {};
+
+cardButtons.forEach(btn => {
+  btn.addEventListener('click', event => {
+    // if (!event.target.closest('.addToCart')) {
+    //   return;
+    // }
+
+    const cardItemEl = event.target.closest('.card');
+    console.log(cardItemEl);
+    const id = +cardItemEl.dataset.id - 1;
+
+    addToCart(id);
+  })
+})
+
+
+function addToCart(productId) {
+  const productRow = `
   <div class="item">
-  <img src="${item.img}" alt="${item.title}" class="item__pic">
+  <img src="${data[productId].img}" alt="${data[productId].title}" class="item__pic">
   <div class="item__content">
-    <h4 class="item__title">${item.title}</h4>
+    <h4 class="item__title">${data[productId].title}</h4>
     <div class="item__box">
-      <p class="item__price">Price:<span class="item__price_select">$${item.price}</span></p>
-      <p class="item__color">Color:<span class="item__color_select">${item.color}</span></p>
-      <p class="item__size">Size:<span class="item__size_select">${item.size}</span></p>
-      <p class="item__quantity">Quantity: <input type="number" value="${item.qty}" class="item__quantity_select"></p>
+      <p class="item__price">Price:<span class="item__price_select">$${data[productId].price}</span></p>
+      <p class="item__color">Color:<span class="item__color_select">${data[productId].color}</span></p>
+      <p class="item__size">Size:<span class="item__size_select">${data[productId].size}</span></p>
+      <p class="item__quantity">Quantity: <input type="number" value="${data[productId].qty}" class="item__quantity_select"></p>
     </div>
     <button class="item__close">
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -70,23 +88,12 @@ function updateCart() {
     </button>
   </div>
   </div>
-  `);
+  `
 
-  cartItems.innerHTML = cartHTML.join('');
-}
-
-let cart = [];
-
-for (let i = 0; i < cardButtonLength; i++) {
-  cardButton[i].addEventListener("click", (e) => {
-    addToCart(data, parseInt(e.target.id));
-  });
-}
-
-function addToCart(products, id){
-  const product = products.find((item) => item.id === id);
-  const cartProduct = cart.find((product) => product.id === id);
-  if (cartProduct != undefined && product.id == cartProduct.id) {
-    updateCart();
-  }
+  cartItems.insertAdjacentHTML("beforebegin", productRow);
 };
+
+// const removeFromCart = document.querySelector('.item__close');
+// removeFromCart.addEventListener('click', () => {
+
+// })
