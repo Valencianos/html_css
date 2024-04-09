@@ -377,31 +377,33 @@ li {
 .footer {
   background-color: #222224;
 }
-.footer__media-epilogue {
+.footer__media {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.footer__media-text {
+.footer__media_text {
   margin: 30px 0;
 }
-.footer__media-text h6 {
+.footer__media_text h6 {
   color: #FBFBFB;
   font-size: 16px;
 }
-.footer_media-icons {
+.footer__media_icons {
   display: flex;
   justify-content: flex-end;
   gap: 7px;
   margin: 24px 0;
 }
-.footer__media-button {
+.footer__media_link {
   width: 32px;
   height: 32px;
   background-color: #FFF;
   cursor: pointer;
+  padding: 8px;
+  text-align: center;
 }
-.footer__media-button:hover {
+.footer__media_link:hover {
   background-color: #F16D7F;
 }
 
@@ -659,7 +661,7 @@ svg:hover {
   .feedback__subscribe_text h4 {
     line-height: 153%;
   }
-  .footer__media-epilogue {
+  .footer__media {
     flex-direction: column-reverse;
     gap: 40px;
     padding: 43px 0 9px 0;

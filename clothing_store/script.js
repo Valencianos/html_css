@@ -57,9 +57,7 @@ cardButtons.forEach(btn => {
     // if (!event.target.closest('.addToCart')) {
     //   return;
     // }
-
     const cardItemEl = event.target.closest('.card');
-    console.log(cardItemEl);
     const id = +cardItemEl.dataset.id - 1;
 
     addToCart(id);

@@ -381,39 +381,36 @@ li {
 }
 
 .footer {
-    background-color: #222224;
-    &__media-epilogue {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+  background-color: #222224;
+  &__media {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;     
+    &_text {
+      margin: 30px 0;
     }
-    
-    &__media-text {
-        margin: 30px 0;
+    &_text h6 {
+      color: #FBFBFB;
+      font-size: 16px;
     }
-    
-    &__media-text h6 {
-        color: #FBFBFB;
-        font-size: 16px;
+    &_icons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 7px;
+      margin: 24px 0;
     }
-    
-    &_media-icons {
-        display: flex;
-        justify-content: flex-end;
-        gap: 7px;
-        margin: 24px 0;
-    }
-    
-    &__media-button {
-        width: 32px;
-        height: 32px;
-        background-color: #FFF;
-        cursor: pointer;
-    }
-    
-    &__media-button:hover {
+    &_link {
+      width: 32px;
+      height: 32px;
+      background-color: #FFF;
+      cursor: pointer;
+      padding: 8px;
+      text-align: center;
+      &:hover {
         background-color: $colorSelectSite;
+      }
     }
+  }
 }
 
 svg:hover {
@@ -702,7 +699,7 @@ svg:hover {
     }
   }
 
-  .footer__media-epilogue {
+  .footer__media {
     flex-direction: column-reverse;
     gap: 40px;
     padding: 43px 0 9px 0;
