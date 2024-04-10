@@ -30,14 +30,14 @@ function findElementByClass(rootEl, classEl) {
       if (element.className === classEl) {
         searchEl.push(element);
         if (searchEl[0].className !== classEl) {
-          searchElement = [];
-          searchElement.push(element);
+          searchEl = [];
+          searchEl.push(element);
         }
       }
       findElementByClass(element, classEl);
     }
   }
-  return searchElement[0];
+  return searchEl[0];
 }
 const targetElement = findElementByClass(HTMLElement, 'my-class');
 console.log(targetElement);
