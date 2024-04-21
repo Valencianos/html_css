@@ -37,9 +37,6 @@ img {
   box-shadow: 17px 19px 24px 0 rgba(0, 0, 0, 0.13);
   position: relative;
 }
-.card__pic {
-  
-}
 
 .card__content {
   display: flex;
