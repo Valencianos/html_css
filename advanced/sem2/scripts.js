@@ -47,25 +47,56 @@ class BankAccount {
 // 4. В функции getAccountInfo используйте instanceof для проверки типа переданного пользователя и дайте соответствующий ответ.
 
 class User {
-  firstName = '';
-  lastName = '';
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
 }
 
 class PremiumUser extends User {
-  premiumAccount = new Date().setFullYear(new Date().getFullYear() + 1);
+  constructor(firstName, lastName) {
+    super(firstName, lastName);
+  }
+  premiumAccount = null;
+  setPremiumAccount() {
+    this.setPremiumAccount = new Date().setFullYear(new Date().getFullYear() + 1);
+  }
 }
 
 // Создать RegularUser
-class RegularUSer extends User {
-
+class RegularUser extends User {
+  constructor(firstName, lastName) {
+    super(firstName, lastName);
+  }
 }
 
 function getAccountInfo(user) {
   // Премиум действителен до такой-то даты или информация отсутствует
-  
+  if (user instanceof PremiumUser) {
+    console.log(`Premium account valid till ${new Date(user.premiumAccount).getFullYear()}` ?? `information not found`, user.firstName, user.lastName);
+  } else if (user instanceof RegularUser) {
+    console.log(`User without Premium account: ${user.firstName, user.lastName}`);
+  } else {
+    console.log(`Cannot recognize type of user`);
+  }
 }
 
-  // пользователь без премиум аккаунта
-  // Тип пользователя не определен
+// Вы создаете интерфейс, где пользователь вводит число. Ваша задача — проверить, является ли введенное значение числом или нет, и дать соответствующий ответ.
+// 1. Создайте HTML-структуру: текстовое поле для ввода числа и кнопку "Проверить".
+// 2. Добавьте место (например, div) для вывода сообщения пользователю.
+// 3. Напишите функцию, которая будет вызвана при нажатии на кнопку. Эта функция должна использовать try и catch для проверки вводимого значения.
 
-  // Проверка
+const button = document.querySelector('#btn');
+const push = document.querySelector('#input');
+const result = document.querySelector('#out');
+button.addEventListener('click', () => {
+  try {
+    const inputElem = push.value;
+    if (isNaN(inputElem)) {
+      throw new Error ('You enter not a number')
+    }
+    result.textContent = `You enter a number ${inputElem}`;
+  } catch (error) {
+    result.textContent = error.message;
+  }
+})

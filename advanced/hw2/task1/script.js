@@ -14,19 +14,24 @@ class Library {
   }
 
   addBook(title) {
-    if (this.#books.indexOf(title) != -1) throw new Error('Book already is in library');
-    return this.#books.push(title);
+    if (this.hasBook(title)) {
+      throw new Error('Book already is in library');
+    } else {
+      this.#books.push(title);
+    }
   }
 
   removeBook(title) {
-    if (title in this.#books) throw new Error('Book could not be found');
-    const index = this.#books.indexOf(title);
-    this.#books.splice(index, 1);
-    return this.#books;
+    if (!this.hasBook(title)) {
+      throw new Error('Book could not be found');
+    } else {
+      const index = this.#books.indexOf(title);
+      this.#books.splice(index, 1);
+    }
   }
 
   hasBook(title) {
-
+    return this.#books.includes(title);
   }
 
   constructor(books) {
@@ -34,7 +39,7 @@ class Library {
   }
 }
 
-let books = new Library('you and me');
+let books = new Library(['you and me']);
 console.log(books);
 
 books.addBook('Tom Sower');
@@ -49,46 +54,3 @@ books.removeBook('Lara Croft')
 console.log(books);
 books.removeBook('Once')
 console.log(books);
-
-
-// Задание 2
-// Вы разрабатываете систему отзывов для вашего веб-сайта. Пользователи могут оставлять отзывы, но чтобы исключить слишком короткие или слишком длинные сообщения, вы решаете установить некоторые ограничения.
-// Создайте HTML-структуру с текстовым полем для ввода отзыва, кнопкой для отправки и контейнером, где будут отображаться отзывы.
-// Напишите функцию, которая будет добавлять отзыв в контейнер с отзывами. Однако если длина введенного отзыва менее 50 или более 500 символов, функция должна генерировать исключение.
-// При добавлении отзыва, он должен отображаться на странице под предыдущими отзывами, а не заменять их.
-
-const initialData = [
-  {
-    product: "Apple iPhone 13",
-    reviews: [
-      {
-        id: "1",
-        text: "Отличный телефон! Батарея держится долго.",
-      },
-      {
-        id: "2",
-        text: "Камера супер, фото выглядят просто потрясающе.",
-      },
-    ],
-  },
-  {
-    product: "Samsung Galaxy Z Fold 3",
-    reviews: [
-      {
-        id: "3",
-        text: "Интересный дизайн, но дорогой.",
-      },
-    ],
-  },
-  {
-    product: "Sony PlayStation 5",
-    reviews: [
-      {
-        id: "4",
-        text: "Люблю играть на PS5, графика на высоте.",
-      },
-    ],
-  },
-];
-
-// Вы можете использовать этот массив initialData для начальной загрузки данных при запуске вашего приложения.
