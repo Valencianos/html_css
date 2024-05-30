@@ -9,41 +9,44 @@
 // При клике на название продукта отображается список всех отзывов по этому продукту.
 // Возможность удаления отзыва (при нажатии на кнопку "Удалить" рядом с отзывом, данный отзыв удаляется из LocalStorage).
 
-const feedCat = document.querySelector('.feedback_category');
-const feedInput = document.querySelector('.feedback_input');
-const feedBtn = document.querySelector('.feedback_button');
-const feedDel = document.querySelectorAll('.feedback_delete');
-const feedView = document.querySelector('.feedback_view');
+const category = document.querySelector('.category');
+const input = document.querySelector('.input');
+const saveBtn = document.querySelector('.save_button');
+const delBtn = document.querySelector('.delete_button');
+const view = document.querySelector('.view');
 
-const addData = () => {
-  for (let i = 0; i < localStorage.length; i++) {
-    const feedTitle = document.createElement('div');
-    feedTitle.innerHTML = `
-    <details>
-      <summary>${localStorage.key(i)}</summary>
-      <p>${localStorage.getItem(localStorage.key(i))}</p>
-      <button class="feedback_delete">del</button>
-    </details>
-    `
-    feedView.appendChild(feedTitle);
-  }
+if (localStorage.getItem('feedbacks')) {
+  view.innerHTML = localStorage.getItem('feedbacks');
 }
 
-addData();
+saveBtn.addEventListener('click', () => {
+  const catValue = category.value;
+  const inputValue = input.value;
+  if (catValue !== '' && inputValue !== '') {
+    const viewList = document.createElement('div');
+    viewList.innerHTML = `
+    <details class="details">
+      <summary class="summary">${catValue}</summary>
+      <p>${inputValue}</p>
+      <button class="delete_button">del</button>
+    </details>
+    `;
+    view.append(viewList);
 
-feedBtn.addEventListener('click', () => {
-  localStorage.setItem(feedCat.value, feedInput.value);
+    category.value = '';
+    input.value = '';
+
+    localStorage.setItem(catValue, inputValue);
+  }
   alert('Your voice successfully saved');
-  addData();
 });
 
-const removeData = () => {
-  feedDel.forEach(element => {
-    element.addEventListener('click', () => {
-      
-      localStorage.removeItem(localStorage.key(element))
-    });
-  });
-}
+view.addEventListener('click', e => {
+  if (e.target.classList.contains('delete_button')) {
+    const delItem = e.target.closest('.details');
+    delItem.parentNode.removeChild(delItem);
 
-removeData();
+    localStorage.setItem('feedbacks', view.innerHTML);
+  }
+})
+
