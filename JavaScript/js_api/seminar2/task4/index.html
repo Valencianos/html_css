@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seminar 2. Task 4</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    .result {
+      font-weight: bold;
+    }
+  </style>
+  <script defer src="script4.js"></script>
+</head>
+<body>
+  <div class="question">
+    <p>What is your favourite color?</p>
+    <div class="options">
+      <label>
+        <input type="radio" name="q1" value="Black">Black
+      </label>
+      <label>
+        <input type="radio" name="q1" value="White">White
+      </label>
+      <label>
+        <input type="radio" name="q1" value="Violet">Violet
+      </label>
+    </div>
+  </div>
+  
+  <div class="question">
+    <p>What is your favourite animal?</p>
+    <div class="options">
+      <label>
+        <input type="radio" name="q2" value="Dog">Dog
+      </label>
+      <label>
+        <input type="radio" name="q2" value="Cat">Cat
+      </label>
+      <label>
+        <input type="radio" name="q2" value="Parrot">Parrot
+      </label>
+    </div>
+  </div>
+
+  <button id="submit">Complete</button>
+
+  <div class="result" style="display: none;">
+    <p>Results:</p>
+  </div>
+</body>
+</html>
