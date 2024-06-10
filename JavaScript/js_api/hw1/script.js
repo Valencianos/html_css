@@ -14,49 +14,27 @@ const partMax = document.querySelector('.participants-max');
 const joinBtns = document.querySelectorAll('.join');
 const quitBtns = document.querySelectorAll('.quit');
 
+const initialJSON = '[{"id":1,"title":"Аква Гимнастика","time":"13:00","part":0,"partMax":10},{"id":2,"title":"Здоровая спина","time":"14:00","part":0,"partMax":12},{"id":3,"title":"Пресс","time":"15:00","part":0,"partMax":12},{"id":4,"title":"Футбол","time":"16:00","part":0,"partMax":16},{"id":5,"title":"Настольный теннис","time":"17:00","part":0,"partMax":4},{"id":6,"title":"Бассейн","time":"18:00","part":0,"partMax":20}]';
+const subjects ='subjects';
+
+if (localStorage.length < 1) {
+  localStorage.setItem(subjects, initialJSON);
+}
+
+const data = JSON.parse(localStorage.getItem(subjects));
+
 const createCard = (data) => {
-  const item = document.createElement('article');
-  item.classList.add('article');
-  item.innerHTML = (`
+  const liEl = document.createElement('li');
+  liEl.classList.add('item');
+  liEl.insertAdjacentHTML = ('beforeend', `
   <h2 class="title">${data.title}</h2>
   <p class="time">${data.time}</p>
   <p><span class="participants">${data.part}</span> / <span class="participants-max">${data.partMax}</span></p>
   <button class="join">Записаться</button>
   <button class="quit hidden">Отменить запись</button>
   `);
-  return item;
 }
 
-const getData = async (url) => {
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error('Failed to fetch cards')
-    }
-    return await response.json();
-  } catch (error) {
-    console.error(`Error fetching exercizes: ${error}`);
-    return [];
-  }
-};
+const massiveHTML = data.map(el => createCard(el));
+schedule.append(...massiveHTML);
 
-const renderCards = async () => {
-  const cards = await getData('./data.json');
-  schedule.textContent = '';
-  if (cards.length) {
-    const itemList = cards.map((data) => {
-      const itemLi = document.createElement('li');
-      itemLi.classList.add('item');
-      const card = createCard(data);
-      itemLi.append(card);
-      return itemLi;
-    })
-    schedule.append(...itemList);
-  }
-}
-
-renderCards();
-
-joinBtns.forEach((btn) => {
-  console.log(btn);
-});
