@@ -21,20 +21,17 @@
 
     .schedule {
       display: flex;
+      justify-content: space-between;
       flex-wrap: wrap;
       gap: 20px;
     }
 
     .item {
       list-style: none;
-    }
-
-    .article {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      flex-grow: 1;
       gap: 8px;
       width: 200px;
       height: 200px;
@@ -72,6 +69,10 @@
       color: #fff;
       margin: 5px;
       cursor: pointer;
+    }
+
+    .hidden {
+      display: none;
     }
   </style>
 </head>

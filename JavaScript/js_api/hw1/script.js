@@ -14,27 +14,43 @@ const partMax = document.querySelector('.participants-max');
 const joinBtns = document.querySelectorAll('.join');
 const quitBtns = document.querySelectorAll('.quit');
 
-const initialJSON = '[{"id":1,"title":"Аква Гимнастика","time":"13:00","part":0,"partMax":10},{"id":2,"title":"Здоровая спина","time":"14:00","part":0,"partMax":12},{"id":3,"title":"Пресс","time":"15:00","part":0,"partMax":12},{"id":4,"title":"Футбол","time":"16:00","part":0,"partMax":16},{"id":5,"title":"Настольный теннис","time":"17:00","part":0,"partMax":4},{"id":6,"title":"Бассейн","time":"18:00","part":0,"partMax":20}]';
+const initialJSON = '[{"id":1,"title":"Аква Гимнастика","time":"13:00","part":0,"partMax":10},{"id":2,"title":"Здоровая спина","time":"14:00","part":12,"partMax":12},{"id":3,"title":"Пресс","time":"15:00","part":7,"partMax":12},{"id":4,"title":"Футбол","time":"16:00","part":12,"partMax":16},{"id":5,"title":"Настольный теннис","time":"17:00","part":0,"partMax":4},{"id":6,"title":"Бассейн","time":"18:00","part":0,"partMax":20}]';
 const subjects ='subjects';
 
-if (localStorage.length < 1) {
-  localStorage.setItem(subjects, initialJSON);
-}
+// localStorage.setItem(subjects, initialJSON);
 
 const data = JSON.parse(localStorage.getItem(subjects));
 
 const createCard = (data) => {
   const liEl = document.createElement('li');
   liEl.classList.add('item');
-  liEl.insertAdjacentHTML = ('beforeend', `
+  liEl.innerHTML = (`
   <h2 class="title">${data.title}</h2>
   <p class="time">${data.time}</p>
   <p><span class="participants">${data.part}</span> / <span class="participants-max">${data.partMax}</span></p>
   <button class="join">Записаться</button>
   <button class="quit hidden">Отменить запись</button>
   `);
+  schedule.append(liEl);
 }
 
-const massiveHTML = data.map(el => createCard(el));
-schedule.append(...massiveHTML);
 
+const renderCards = (data) => {
+  data.forEach(element => {
+    createCard(element);
+  });
+}
+
+renderCards(data);
+
+schedule.addEventListener('click', (e) => {
+  if (e.target.classList.contains('join')) {
+    const closeLi = e.target.closest('li');
+    closeLi.querySelector('.participants').textContent = Number(closeLi.querySelector('.participants').textContent) + 1;
+
+    localStorage.setItem(subjects, JSON.stringify(data));
+  } else if (e.target.classList.contains('quit')) {
+    
+  }
+
+});
