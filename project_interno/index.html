@@ -5,114 +5,140 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Interno - Пусть ваш дом будет уникальным</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
   <header class="header">
-    <nav class="nav container">
-      <div class="nav__right">
-        <a href="#" class="logo">
-          <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M0 34.0003H13.4588V24.499C13.4588 22.4853 15.0898 20.8543 17.1035 20.8543C19.1172 20.8543 20.7482 22.4853 20.7482 24.499V34.0003H33.9975V0C15.2211 0 0 15.2211 0 34.0003Z"
-              fill="#CDA274" />
-          </svg>
-          <span class="logo_text">Interno</span>
-        </a>
-      </div>
-      <div class="nav__left">
-        <a href="#" class="nav__links">Домой</a>
-        <a href="#" class="nav__links">Проект</a>
-        <a href="#" class="nav__links">Блог</a>
-      </div>
-    </nav>
+    <div class="container">
+      <nav class="nav">
+        <div class="nav__left">
+          <a href="#" class="logo">
+            <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M0 34.0003H13.4588V24.499C13.4588 22.4853 15.0898 20.8543 17.1035 20.8543C19.1172 20.8543 20.7482 22.4853 20.7482 24.499V34.0003H33.9975V0C15.2211 0 0 15.2211 0 34.0003Z"
+                fill="#CDA274" />
+            </svg>
+            <span class="logo__text">Interno</span>
+          </a>
+        </div>
+        <div class="nav__right">
+          <a href="#" class="nav__links">Домой</a>
+          <a href="#" class="nav__links">Проект</a>
+          <a href="#" class="nav__links">Блог</a>
+        </div>
+      </nav>
 
-    <div class="hero container">
-      <h1 class="hero__title">Пусть ваш дом будет уникальным</h1>
-      <p class="hero__text">Существует много вариаций Lorem Ipsum, которые можно использовать</p>
-      <button class="hero__button">Начать</button>
+      <div class="hero">
+        <div class="hero__box">
+          <h1 class="hero__title">Пусть ваш дом будет уникальным</h1>
+          <p class="hero__text">Существует много вариаций Lorem Ipsum, которые можно использовать</p>
+          <button class="hero__button">Начать</button>
+        </div>
+      </div>
     </div>
   </header>
 
-  <main class="main container">
-    <section class="about">
-      <h2 class="about__title">Следите за нашими проектами</h2>
-      <p class="about__text">Хорошо известно, что читатель будет отвлекаться на читабельный контент страницы </p>
-      <div class="about__content">
-        <div class="about__card">
-          <img class="card_img" src="./img/project_1.png" alt="Modern Kitchen">
-          <div class="card__content">
-            <div class="card__text">
-              <h3 class="card__title">Современная кухня</h3>
-              <p class="card__subtitle">Декор / Планировка</p>
+  <main class="main">
+    <div class="container">
+      <section class="about">
+        <h2 class="about__title">Следите за нашими проектами</h2>
+        <p class="about__text">Хорошо известно, что читатель будет отвлекаться<br>на читабельный контент страницы </p>
+        <div class="about__content">
+          <div class="about__card">
+            <img class="card__img" src="./img/project_1.png" alt="Modern Kitchen">
+            <div class="card__content">
+              <div class="card__text">
+                <h3 class="card__title">Современная кухня</h3>
+                <p class="card__subtitle">Декор / Планировка</p>
+              </div>
+              <button class="card__button">
+                <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 19L9 10L1 1" stroke="#292F36" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
             </div>
-            <button class="card__button">
-              <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 19L9 10L1 1" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </button>
+
+          </div>
+
+          <div class="about__card">
+            <img class="card__img" src="./img/project_2.png" alt="Modern Kitchen">
+            <div class="card__content">
+              <div class="card__text">
+                <h3 class="card__title">Современная кухня</h3>
+                <p class="card__subtitle">Декор / Планировка</p>
+              </div>
+              <button class="card__button">
+                <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 19L9 10L1 1" stroke="#292F36" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="about__card">
+            <img class="card__img" src="./img/project_3.png" alt="Modern Kitchen">
+            <div class="card__content">
+              <div class="card__text">
+                <h3 class="card__title">Современная кухня</h3>
+                <p class="card__subtitle">Декор / Планировка</p>
+              </div>
+              <button class="card__button">
+                <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 19L9 10L1 1" stroke="#292F36" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="about__card">
+            <img class="card__img" src="./img/project_4.png" alt="Modern Kitchen">
+            <div class="card__content">
+              <div class="card__text">
+                <h3 class="card__title">Современная кухня</h3>
+                <p class="card__subtitle">Декор / Планировка</p>
+              </div>
+              <button class="card__button">
+                <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 19L9 10L1 1" stroke="#292F36" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
           </div>
 
         </div>
+      </section>
+    </div>
 
-        <div class="about__card">
-          <img class="card_img" src="./img/project_2.png" alt="Modern Kitchen">
-          <div class="card__content">
-            <div class="card__text">
-              <h3 class="card__title">Современная кухня</h3>
-              <p class="card__subtitle">Декор / Планировка</p>
-            </div>
-            <button class="card__button">
-              <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 19L9 10L1 1" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </button>
+    <section class="promo">
+      <div class="container">
+        <div class="promo__wrapper">
+          <div class="promo__box">
+            <p class="promo__selection">12</p>
+            <p class="promo__text">Лет опыта</p>
+          </div>
+          <div class="promo__box">
+            <p class="promo__selection">85</p>
+            <p class="promo__text">Успешных проектов</p>
+          </div>
+          <div class="promo__box">
+            <p class="promo__selection">15</p>
+            <p class="promo__text">Проектов в работе</p>
+          </div>
+          <div class="promo__box">
+            <p class="promo__selection">95</p>
+            <p class="promo__text">Счастливых клиентов</p>
           </div>
         </div>
-
-        <div class="about__card">
-          <img class="card_img" src="./img/project_3.png" alt="Modern Kitchen">
-          <div class="card__content">
-            <div class="card__text">
-              <h3 class="card__title">Современная кухня</h3>
-              <p class="card__subtitle">Декор / Планировка</p>
-            </div>
-            <button class="card__button">
-              <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 19L9 10L1 1" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <div class="about__card">
-          <img class="card_img" src="./img/project_4.png" alt="Modern Kitchen">
-          <div class="card__content">
-            <div class="card__text">
-              <h3 class="card__title">Современная кухня</h3>
-              <p class="card__subtitle">Декор / Планировка</p>
-            </div>
-            <button class="card__button">
-              <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 19L9 10L1 1" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </button>
-          </div>
-        </div>
-
       </div>
     </section>
 
-    <section class="promo">
-      <p class="promo__text"><span class="promo__selection">12</span>Лет опыта</p>
-      <p class="promo__text"><span class="promo__selection">85</span>Успешных проектов</p>
-      <p class="promo__text"><span class="promo__selection">15</span>Проектов в работе</p>
-      <p class="promo__text"><span class="promo__selection">95</span>Счастливых клиентов</p>
-    </section>
-
     <section class="articles">
-      <h2 class="articles__title">Статьи & Новости</h2>
+      <h2 class="articles__title">Статьи &amp; Новости</h2>
       <p class="articles__text">Хорошо известно, что читатель будет отвлекаться на читабельный контент страницы</p>
       <div class="articles__content">
         <article class="articles__card">
@@ -124,7 +150,8 @@
               <p class="articles__text_date">26 Декабрь,2022</p>
               <a href="#" class="articles__text_link">
                 <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.77142 14.9527L7.71428 8.267L1.77142 1.58128" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M1.77142 14.9527L7.71428 8.267L1.77142 1.58128" stroke="#292F36" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </a>
             </div>
@@ -140,7 +167,8 @@
               <p class="articles__text_date">22 Декабрь,2022</p>
               <a href="#" class="articles__text_link">
                 <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.77142 14.9527L7.71428 8.267L1.77142 1.58128" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M1.77142 14.9527L7.71428 8.267L1.77142 1.58128" stroke="#292F36" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </a>
             </div>
@@ -156,7 +184,8 @@
               <p class="articles__text_date">25 Декабрь,2022</p>
               <a href="#" class="articles__text_link">
                 <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.77142 14.9527L7.71428 8.267L1.77142 1.58128" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M1.77142 14.9527L7.71428 8.267L1.77142 1.58128" stroke="#292F36" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </a>
             </div>
@@ -175,7 +204,7 @@
             d="M0 34.0003H13.4588V24.499C13.4588 22.4853 15.0898 20.8543 17.1035 20.8543C19.1172 20.8543 20.7482 22.4853 20.7482 24.499V34.0003H33.9975V0C15.2211 0 0 15.2211 0 34.0003Z"
             fill="#CDA274" />
         </svg>
-        <span class="logo_text">Interno</span>
+        <span class="logo__text">Interno</span>
       </a>
       <a href="#" class="footer__media_link">
         <img src="./img/twitter.svg" alt="Twitter">
