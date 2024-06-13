@@ -208,6 +208,7 @@ button {
 
 .promo {
   background-color: #f4f0ec;
+  margin-bottom: 96px;
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -244,55 +245,156 @@ button {
   }
 }
 
-// .articles {
-//   &__title {
-//   }
-//   &__text {
-//     &_title {
-//     }
-//     &_subtitle {
-//     }
-//     &_date {
-//     }
-//     &_link {
-//     }
-//   }
-//   &__content {
-//   }
-//   &__card {
-//   }
-//   &__img {
-//   }
-//   &__design {
-//   }
+.articles {
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  &__title {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    color: $title-color;
+  }
+  &__text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    color: $second-color;
+    margin-bottom: 52px;
+  }
+  &__content {
+    display: flex;
+    gap: 27px;
+    justify-content: space-between;
+  }
+  &__item {
+    border: 1px solid #e7e7e7;
+    border-radius: 62px;
+    padding: 21px;
+    box-shadow: 0 10px 30px 0 rgba(255, 255, 255, 0.25);
+    &:hover {
+      box-shadow: 0 10px 30px 0 rgba(255, 255, 255, 0.25);
+      background: #f4f0ec;
+      & button {
+        background-color: #fff;
+      }
+    }
+  }
 
-// }
+.item {
+  position: relative;
+  z-index: 1;
+  &__img {
+    margin-bottom: 21px;
+  }
+  &__design {
+    position: absolute;
+    left: 41px;
+    top: 249px;
+    z-index: 5;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+    color: #4d5053;
+    background: #fff;
+    border-radius: 8px 8px 8px 0;
+    padding: 4px 10px;
+  }
+  &__text {
+    margin-bottom: 16px;
+    &_title {
+      font-family: $second-family;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 1.25;
+      letter-spacing: 0.02em;
+      color: $title-color;
+      margin-bottom: 30px;
+    }
+    &_subtitle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &_date {
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: 0.01em;
+      text-transform: capitalize;
+      color: $second-color;
+    }
+    &_link {
+      width: 52px;
+      height: 52px;
+    }
+  }
+}
+}
 
-// .footer {
-//   &__title {
-//   }
-//   &__text {
-//   }
-//   &__media {
-//     &_link {
-
-//     }
-//   }
-//   &__links {
-//     &_title {
-//     }
-//     &_text {
-//     }
-//   }
-//   &__contacts {
-//     &_title {
-//     }
-//     &_address {
-//     }
-//     &_mail {
-//     }
-//     &_phone {
-//     }
-//   }
-// }
-
+.footer {
+  margin-bottom: 100px;
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo {
+    margin-bottom: 30px;
+  }
+  &__media {
+    &_link {
+      margin-right: 20px;
+    }
+  }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    &_title {
+      font-family: $second-family;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 1.25;
+      color: $title-color;
+    }
+    &_text {
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 3;
+      letter-spacing: 0.01em;
+      color: $second-color;
+    }
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    &_title {
+      font-family: $second-family;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 1.25;
+      color: $title-color;
+    }
+    &_info {
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 3;
+      letter-spacing: 0.01em;
+      color: $second-color;
+    }
+  }
+}

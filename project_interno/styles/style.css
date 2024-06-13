@@ -410,6 +410,7 @@ button {
 
 .promo {
   background-color: #f4f0ec;
+  margin-bottom: 96px;
 }
 .promo__wrapper {
   display: grid;
@@ -444,4 +445,153 @@ button {
   letter-spacing: 0.02em;
   color: #cda274;
   margin: 0;
+}
+
+.articles__box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+}
+.articles__title {
+  font-family: "DM Serif Display", sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  color: #292f36;
+}
+.articles__text {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  color: #4d5053;
+  margin-bottom: 52px;
+}
+.articles__content {
+  display: flex;
+  gap: 27px;
+  justify-content: space-between;
+}
+.articles__item {
+  border: 1px solid #e7e7e7;
+  border-radius: 62px;
+  padding: 21px;
+  box-shadow: 0 10px 30px 0 rgba(255, 255, 255, 0.25);
+}
+.articles__item:hover {
+  box-shadow: 0 10px 30px 0 rgba(255, 255, 255, 0.25);
+  background: #f4f0ec;
+}
+.articles__item:hover button {
+  background-color: #fff;
+}
+.articles .item {
+  position: relative;
+  z-index: 1;
+}
+.articles .item__img {
+  margin-bottom: 21px;
+}
+.articles .item__design {
+  position: absolute;
+  left: 41px;
+  top: 249px;
+  z-index: 5;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  color: #4d5053;
+  background: #fff;
+  border-radius: 8px 8px 8px 0;
+  padding: 4px 10px;
+}
+.articles .item__text {
+  margin-bottom: 16px;
+}
+.articles .item__text_title {
+  font-family: "DM Serif Display", sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  color: #292f36;
+  margin-bottom: 30px;
+}
+.articles .item__text_subtitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.articles .item__text_date {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  color: #4d5053;
+}
+.articles .item__text_link {
+  width: 52px;
+  height: 52px;
+}
+
+.footer {
+  margin-bottom: 100px;
+}
+.footer__box {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__logo {
+  margin-bottom: 30px;
+}
+.footer__media_link {
+  margin-right: 20px;
+}
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer__links_title {
+  font-family: "DM Serif Display", sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1.25;
+  color: #292f36;
+}
+.footer__links_text {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 3;
+  letter-spacing: 0.01em;
+  color: #4d5053;
+}
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer__contacts_title {
+  font-family: "DM Serif Display", sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1.25;
+  color: #292f36;
+}
+.footer__contacts_info {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 3;
+  letter-spacing: 0.01em;
+  color: #4d5053;
 }/*# sourceMappingURL=style.css.map */
