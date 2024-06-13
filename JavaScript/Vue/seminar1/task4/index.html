@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seminar 1. Task 4</title>
+  <style>
+    .par {
+      animation: vision 1s ease-in-out;
+    }
+    @keyframes vision {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<!-- Создать кнопку “Показать еще” при клике на которую появляется контент под кнопкой, при повторном клике, контент необходимо скрыть.  -->
+<body>
+  <div id="hello-vue">
+    <button @click="approve=!approve">Показать еще</button>
+    <p class="par" v-show="approve">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa laborum vitae libero alias, id suscipit et? Esse et inventore soluta sapiente porro, rem minima tempora obcaecati ipsum quisquam voluptate dolor.</p>
+  </div>
+
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+
+    const app = Vue.createApp({
+      data() {
+        return {
+          approve: false,
+        }
+      }
+    })
+
+    app.mount('#hello-vue')
+  </script>
+</body>
+
+</html>

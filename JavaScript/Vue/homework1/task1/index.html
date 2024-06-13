@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework 1. Task 1</title>
+</head>
+<!-- 1. Создать кнопку "Перевернуть". При клике на кнопку текст кнопки, должен перевернуться и отобразиться в обратном порядке.
+-->
+<body>
+  <div id="hello-vue">
+    <button @click="reversed">{{ name }}</button>
+  </div>
+
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+
+    const app = Vue.createApp({
+      data() {
+        return {
+          name: 'Перевернуть'
+        }
+      },
+      methods: {
+        reversed() {
+          this.name = 'ьтунревереП'
+        }
+      },
+    })
+
+    app.mount('#hello-vue')
+  </script>
+</body>
+
+</html>

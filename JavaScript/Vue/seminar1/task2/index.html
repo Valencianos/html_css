@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seminar 1. Task 2</title>
+</head>
+<!-- 1. Создать параграф, внутри которого будет отображаться текст “Товаров в корзине 0”
+2. Создать кнопку “Купить”, при клике на которую, значение внутри параграфа будет увеличиваться на 1, при повторном нажатии на эту кнопку, счетчик не становится больше
+3. При нажатии на кнопку купить, необходимо чтобы текст внутри кнопки поменялся на “Товар в Корзине” -->
+<body>
+  <div id="hello-vue">
+    <p>Товаров в корзине {{ count }}</p>
+    <button @click="add">{{ cartBtn }}</button>
+    <button @click="del">Удалить</button>
+  </div>
+
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+
+    const app = Vue.createApp({
+      data() {
+        return {
+          count: 0,
+          cartBtn: 'Купить',
+        }
+      },
+      methods: {
+        add() {
+          if (this.count < 1) {
+            this.count++;
+            this.cartBtn = 'Товар в корзине';
+          }
+        },
+        del() {
+          if (this.count > 0) {
+            this.count--;
+            this.cartBtn = 'Купить';
+          }
+        }
+      },
+    })
+
+    app.mount('#hello-vue')
+  </script>
+</body>
+
+</html>
