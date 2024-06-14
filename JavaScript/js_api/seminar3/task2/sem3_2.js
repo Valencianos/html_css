@@ -18,10 +18,12 @@
 const photoContainer = document.getElementById('photo-container');
 let page = 1;
 
-async function fetchPhotos() {
+const accessKey = 'IF34zsBayguBXtfQT7_CQD_ukKfgxcnNk95pQB3ut4c';
+
+const fetchPhotos = async (page) => {
   try {
     const response = await fetch(
-      `https://api.unsplash.com/photos/?client_id=IF34zsBayguBXtfQT7_CQD_ukKfgxcnNk95pQB3ut4c&page=${page}`
+      `https://api.unsplash.com/photos/?client_id=${accessKey}&page=${page}`
     );
     const photos = await response.json();
     return photos;
@@ -32,11 +34,28 @@ async function fetchPhotos() {
   }
 }
 
-async function loadMorePhotos() {
-  // Create content
+
+const run = async () => {
+  const data = await fetchPhotos(page);
+  loadMorePhotos(data);
+
 }
 
-// window. add event listener('?', () => {create infinity scroll   if() { loadMorePhotos()}})
+const loadMorePhotos = (data) => {
+  for (const obj of data) {
+    photoContainer.insertAdjacentHTML('beforeend', `
+      <div class="photo-box">
+        <img src="${obj.urls.regular}" alt="${obj.alt_description}" />
+      </div>
+    `);
+  }
+}
 
-// Loading of first photos
-loadMorePhotos();
+run();
+
+window.addEventListener('scroll', () => {
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 1000) {
+    page++;
+    run();
+  }
+});
