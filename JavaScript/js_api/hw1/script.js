@@ -6,51 +6,51 @@
 // 5. Запись пользователя на занятие можно отменить путем нажатия на кнопку "Отменить запись". После отмены записи, обновите количество записанных участников и состояние кнопки.
 // 6. Все изменения (запись, отмена записи) должны сохраняться и отображаться в реальном времени на странице.
 
-const schedule = document.querySelector('.schedule');
-const title = document.querySelector('.title');
-const time = document.querySelector('.time');
-const part = document.querySelector('.participants');
-const partMax = document.querySelector('.participants-max');
-const joinBtns = document.querySelectorAll('.join');
-const quitBtns = document.querySelectorAll('.quit');
 
 const initialJSON = '[{"id":1,"title":"Аква Гимнастика","time":"13:00","part":0,"partMax":10},{"id":2,"title":"Здоровая спина","time":"14:00","part":12,"partMax":12},{"id":3,"title":"Пресс","time":"15:00","part":7,"partMax":12},{"id":4,"title":"Футбол","time":"16:00","part":12,"partMax":16},{"id":5,"title":"Настольный теннис","time":"17:00","part":0,"partMax":4},{"id":6,"title":"Бассейн","time":"18:00","part":0,"partMax":20}]';
-const subjects ='subjects';
 
-// localStorage.setItem(subjects, initialJSON);
+const dataFromStorage = JSON.parse(initialJSON);
+const schedule = document.querySelector('.schedule');
+const title = document.querySelectorAll('.title');
+const time = document.querySelectorAll('.time');
+const part = document.querySelectorAll('.participants');
+const partMax = document.querySelectorAll('.participants-max');
+const join = document.querySelectorAll('.join');
+const quit = document.querySelectorAll('.quit');
 
-const data = JSON.parse(localStorage.getItem(subjects));
-
-const createCard = (data) => {
-  const liEl = document.createElement('li');
-  liEl.classList.add('item');
-  liEl.innerHTML = (`
-  <h2 class="title">${data.title}</h2>
-  <p class="time">${data.time}</p>
-  <p><span class="participants">${data.part}</span> / <span class="participants-max">${data.partMax}</span></p>
-  <button class="join">Записаться</button>
-  <button class="quit hidden">Отменить запись</button>
-  `);
-  schedule.append(liEl);
+const renderProducts = (params) => {
+  return params.map(element => `
+    <div class="item">
+      <h2 class="title">${element.title}</h2>
+      <p class="time">${element.time}</p>
+      <p><span class="participants">${element.part}</span> / <span class="participants-max">${element.partMax}</span></p>
+      <button class="join">Записаться</button>
+      <button class="quit hidden">Отменить запись</button>
+    </div>
+    `
+  ).join('');
 }
 
-
-const renderCards = (data) => {
-  data.forEach(element => {
-    createCard(element);
-  });
-}
-
-renderCards(data);
+const productCode = renderProducts(dataFromStorage);
+schedule.innerHTML = productCode;
 
 schedule.addEventListener('click', (e) => {
   if (e.target.classList.contains('join')) {
-    const closeLi = e.target.closest('li');
-    closeLi.querySelector('.participants').textContent = Number(closeLi.querySelector('.participants').textContent) + 1;
+    const closeDiv = e.target.closest('div');
 
-    localStorage.setItem(subjects, JSON.stringify(data));
+    if (closeDiv.querySelector('.participants').textContent < closeDiv.querySelector('.participants-max').textContent) {
+      closeDiv.querySelector('.participants').textContent++;
+      closeDiv.querySelector('.join').setAttribute('disabled', true);
+      closeDiv.querySelector('.quit').classList.remove('hidden');
+    } else {
+      closeDiv.querySelector('.join').setAttribute('disabled', false);
+    }
+
   } else if (e.target.classList.contains('quit')) {
-    
+    const closeDiv = e.target.closest('div');
+    closeDiv.querySelector('.participants').textContent--;
+    closeDiv.querySelector('.quit').classList.add('hidden');
+    closeDiv.querySelector('.join').setAttribute('disabled', false);
   }
-
 });
+
