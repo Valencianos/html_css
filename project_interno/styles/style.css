@@ -471,7 +471,8 @@ button {
   margin-bottom: 52px;
 }
 .articles__content {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 27px;
   justify-content: space-between;
 }

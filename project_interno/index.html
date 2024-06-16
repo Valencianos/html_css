@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
   <header class="header">
     <div class="container">
       <nav class="nav">
@@ -144,14 +145,14 @@
           <p class="articles__text">Хорошо известно, что читатель будет отвлекаться<br>на читабельный контент страницы
           </p>
         </div>
-        <div class="articles__content">
-          <article class="articles__item item">
-            <img src="./img/kitchen-design.png" alt="Kitchen Design" class="item__img">
-            <p class="item__design">Дизайн кухни</p>
+        <div class="articles__content" id="article__box">
+          <article v-for="article in articles" :key="article.id" class="articles__item item">
+            <img :src="article.img" alt="Kitchen Design" class="item__img">
+            <p class="item__design">{{ article.category }}</p>
             <div class="item__text">
-              <h3 class="item__text_title">Создадим лучший макет перепланировки</h3>
+              <h3 class="item__text_title">{{ article.title }}</h3>
               <div class="item__text_subtitle">
-                <p class="item__text_date">26 Декабрь,2022</p>
+                <p class="item__text_date">{{ article.date }}</p>
                 <button href="#" class="item__text_link card__button">
                   <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.77142 14.9527L7.71428 8.267L1.77142 1.58128" stroke="#292F36" stroke-width="2"
@@ -162,39 +163,39 @@
             </div>
           </article>
 
-          <article class="articles__item item">
-            <img src="./img/lifestyle-design.png" alt="Lifestyle Design" class="item__img">
-            <p class="item__design">Дизайн для жизни</p>
-            <div class="item__text">
-              <h3 class="item__text_title">Лучшие интерьерные идеи по низкой цене</h3>
-              <div class="item__text_subtitle">
-                <p class="item__text_date">22 Декабрь,2022</p>
-                <button href="#" class="item__text_link card__button">
-                  <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.77142 14.9527L7.71428 8.267L1.77142 1.58128" stroke="#292F36" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </button>
+          <!-- <article class="articles__item item">
+              <img src="./img/lifestyle-design.png" alt="Lifestyle Design" class="item__img">
+              <p class="item__design">Дизайн для жизни</p>
+              <div class="item__text">
+                <h3 class="item__text_title">Лучшие интерьерные идеи по низкой цене</h3>
+                <div class="item__text_subtitle">
+                  <p class="item__text_date">22 Декабрь,2022</p>
+                  <button href="#" class="item__text_link card__button">
+                    <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.77142 14.9527L7.71428 8.267L1.77142 1.58128" stroke="#292F36" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
 
-          <article class="articles__item item">
-            <img src="./img/interior-design.png" alt="Kitchen Design" class="item__img">
-            <p class="item__design">Дизайн Интерьера</p>
-            <div class="item__text">
-              <h3 class="item__text_title">Лучшие интерьерные решения для офисов</h3>
-              <div class="item__text_subtitle">
-                <p class="item__text_date">25 Декабрь,2022</p>
-                <button href="#" class="item__text_link card__button">
-                  <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.77142 14.9527L7.71428 8.267L1.77142 1.58128" stroke="#292F36" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </button>
+            <article class="articles__item item">
+              <img src="./img/interior-design.png" alt="Kitchen Design" class="item__img">
+              <p class="item__design">Дизайн Интерьера</p>
+              <div class="item__text">
+                <h3 class="item__text_title">Лучшие интерьерные решения для офисов</h3>
+                <div class="item__text_subtitle">
+                  <p class="item__text_date">25 Декабрь,2022</p>
+                  <button href="#" class="item__text_link card__button">
+                    <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.77142 14.9527L7.71428 8.267L1.77142 1.58128" stroke="#292F36" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                </div>
               </div>
-            </div>
-          </article>
+            </article> -->
         </div>
       </div>
 
@@ -221,14 +222,14 @@
             <img src="./img/linkedin.svg" alt="LinkedIn">
           </a>
         </div>
-  
+
         <div class="footer__links">
           <h4 class="footer__links_title">Страницы</h4>
           <p class="footer__links_text">Домой</p>
           <p class="footer__links_text">Проект</p>
           <p class="footer__links_text">Блог</p>
         </div>
-  
+
         <div class="footer__contacts">
           <h4 class="footer__contacts_title">Контакты</h4>
           <p class="footer__contacts_info">55 East Birchwood Ave.<br> Brooklyn, New York 11201</p>
@@ -238,6 +239,55 @@
       </div>
     </div>
   </footer>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          articles: [
+            {
+              title: 'Создадим лучший макет перепланировки',
+              category: 'Дизайн кухни',
+              date: '26 Декабрь,2022',
+              img: './img/kitchen-design.png'
+            },
+            {
+              title: 'Лучшие интерьерные идеи по низкой цене',
+              category: 'Дизайн для жизни',
+              date: '22 Декабрь,2022',
+              img: './img/lifestyle-design.png'
+            },
+            {
+              title: 'Лучшие интерьерные решения для офисов',
+              category: 'Дизайн Интерьера',
+              date: '25 Декабрь,2022',
+              img: './img/interior-design.png'
+            },
+            {
+              title: 'Создадим лучший макет перепланировки',
+              category: 'Дизайн кухни',
+              date: '26 Декабрь,2022',
+              img: './img/kitchen-design_2.png'
+            },
+            {
+              title: 'Лучшие интерьерные идеи по низкой цене',
+              category: 'Дизайн для жизни',
+              date: '22 Декабрь,2022',
+              img: './img/lifestyle-design_2.png'
+            },
+            {
+              title: 'Лучшие интерьерные решения для офисов',
+              category: 'Дизайн Интерьера',
+              date: '25 Декабрь,2022',
+              img: './img/interior-design_2.png'
+            }
+          ]
+        }
+      }
+    })
+
+    app.mount('#article__box')
+  </script>
 </body>
 
 </html>
