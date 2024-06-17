@@ -43,7 +43,7 @@ const app = Vue.createApp({
   }
 })
 
-app.mount('#article')
+app.mount('#article__box')
 
 
 

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seminar 2. Task 2</title>
+</head>
+<!-- Вы разрабатываете простое приложение для отображения списка пользователей. У вас есть массив объектов users, где каждый объект представляет одного пользователя с его именем и возрастом. Вам необходимо отобразить каждого пользователя из массива в виде списка на странице.-->
+<body>
+  <div id="hello-vue">
+    <ul class="user-list">
+      <li v-for="user in users" :key="user.id">Name: {{ user.name }} Lastname: {{ user.lastname }}</li>
+
+    </ul>
+  </div>
+
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+
+    const app = Vue.createApp({
+      data() {
+        return {
+          users: [
+          {
+            name: 'Romelu',
+            lastname: 'Lukaku',
+          },
+          {
+            name: 'Kevin',
+            lastname: 'De Bruyne',
+          },
+          {
+            name: 'Yuri',
+            lastname: 'Tielemans',
+          },
+          {
+            name: 'Gerard',
+            lastname: 'Doque',
+          }]
+        }
+      }
+    })
+
+    app.mount('#hello-vue')
+  </script>
+</body>
+
+</html>

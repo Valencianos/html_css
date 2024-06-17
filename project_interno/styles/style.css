@@ -209,6 +209,18 @@ template {
   display: none;
 }
 
+.banner {
+  position: relative;
+}
+.banner__box {
+  position: absolute;
+  top: 178px;
+  left: 50%;
+  border-radius: 37px 37px 0 0;
+  background-color: #fff;
+  padding: 41px 78px;
+}
+
 * {
   margin: 0;
   padding: 0;

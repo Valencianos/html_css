@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seminar 2. Task 4</title>
+</head>
+<!-- Вы разрабатываете приложение для управления списком контактов. У вас есть форма с полями "Имя", "Фамилия" и "Email", где пользователь может вводить информацию о новом контакте. После добавления контакта он должен отображаться в списке контактов. Требуется связать форму с данными и отображать список контактов на странице.-->
+
+<body>
+  <div id="hello-vue">
+    <form action="">
+      <input v-model="contact.name" type="text" />
+      <input v-model="contact.lastname" type="text" />
+      <input v-model="contact.mail" type="text" />
+      <button @click="addUser">Add</button>
+    </form>
+
+    <ul class="user-list">
+      <li v-for="user in users" :key="user.id">Contact: {{ user.name }} {{ user.lastname }} - {{ user.mail }}</li>
+    </ul>
+  </div>
+
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+
+    const app = Vue.createApp({
+      data() {
+        return {
+          contact: {
+            name: '',
+            lastname: '',
+            mail: '',
+          },
+
+          users: [
+            {
+              id: 0,
+              name: 'Romelu',
+              lastname: 'Lukaku',
+              mail: 'romelu@gmail.com'
+            },
+            {
+              id: 1,
+              name: 'Kevin',
+              lastname: 'De Bruyne',
+              mail: 'kevin@gmail.com'
+            },
+            {
+              id: 2,
+              name: 'Yuri',
+              lastname: 'Tielemans',
+              mail: 'yuri@gmail.com'
+            },
+            {
+              id: 3,
+              name: 'Gerard',
+              lastname: 'Doque',
+              mail: 'gerard@gmail.com'
+            }]
+        }
+      },
+      methods: {
+        addUser() {
+          if (this.contact.name && this.contact.lastname && this.contact.mail) {
+            this.users.push({
+              id: this.users.length + 1,
+              ...this.contact
+            })
+            this.contact.name = '';
+            this.contact.lastname = '';
+            this.contact.mail = '';
+          }
+        }
+      }
+    })
+
+    app.mount('#hello-vue')
+  </script>
+</body>
+
+</html>

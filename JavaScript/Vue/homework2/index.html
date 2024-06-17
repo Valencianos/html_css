@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework 2</title>
+</head>
+<!-- Вы разрабатываете приложение для отображения и сортировки списка товаров. У вас есть массив объектов products, где каждый объект представляет товар с его названием и ценой. Вам необходимо отобразить список товаров и предоставить пользователю возможность сортировать товары по цене (по возрастанию и по убыванию).-->
+
+<body>
+  <div id="hello-vue">
+    <h2 class="title">Sort by</h2>
+    <button @click="sortAs">assending</button>
+    <button @click="sortDes">descending</button>
+    
+    <ul class="products-list">
+      <li v-for="product in products" :key="product.id">{{ product.name }} - {{ product.price }}</li>
+    </ul>
+  </div>
+
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+
+    const app = Vue.createApp({
+      data() {
+        return {
+          contact: {
+          },
+
+          products: [
+            {
+              name: 'Table',
+              price: 400,
+            },
+            {
+              name: 'Chair',
+              price: 500,
+            },
+            {
+              name: 'Bra',
+              price: 200,
+            },
+            {
+              name: 'Sofa',
+              price: 1200,
+            }]
+        }
+      },
+      methods: {
+        sortAs() {
+          this.products.sort(function (a, b) {
+            return a.price - b.price;
+          })
+        },
+        sortDes() {
+          this.products.sort(function (a, b) {
+            return b.price - a.price;
+          })
+        }
+      }
+    })
+
+    app.mount('#hello-vue')
+  </script>
+</body>
+
+</html>
