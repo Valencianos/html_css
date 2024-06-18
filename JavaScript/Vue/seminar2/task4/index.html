@@ -10,7 +10,7 @@
 
 <body>
   <div id="hello-vue">
-    <form action="">
+    <form @submit.prevent>
       <input v-model="contact.name" type="text" />
       <input v-model="contact.lastname" type="text" />
       <input v-model="contact.mail" type="text" />
