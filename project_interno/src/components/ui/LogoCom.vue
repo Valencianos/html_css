@@ -8,11 +8,23 @@
     <span class="logo__text">Interno</span>
   </a>
 </template>
+
 <script>
 export default {
   name: "LogoComponent",
 }
 </script>
-<style lang="">
-  
+
+<style scoped lang="scss">
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &__text {
+      font-family: "DM Serif Display", sans-serif;
+      font-size: 40px;
+      font-weight: 400;
+      color: #292f36;
+    }
+  }
 </style>

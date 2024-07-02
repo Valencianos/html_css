@@ -254,24 +254,10 @@ button {
   display: flex;
   gap: 40px;
 }
-.nav__links {
-  font-family: "Jost", sans-serif;
-  font-size: 20px;
-  text-align: center;
-  font-weight: 400;
-  color: #292f36;
-}
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.logo__text {
-  font-family: "DM Serif Display", sans-serif;
-  font-size: 40px;
-  font-weight: 400;
-  color: #292f36;
+.hero-block {
+  max-height: 758px;
+  margin-bottom: 96px;
 }
 
 .hero {
@@ -279,8 +265,6 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  max-height: 758px;
-  margin-bottom: 96px;
 }
 .hero__box {
   padding-top: 208px;

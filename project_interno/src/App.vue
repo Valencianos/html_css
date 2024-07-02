@@ -1,27 +1,233 @@
 <template>
-  <HeaderComponent></HeaderComponent>
-  <MainHeroComponent></MainHeroComponent>
-  <MainComponent></MainComponent>
-  <FooterComponent></FooterComponent>
+  <HeaderCom></HeaderCom>
+  <router-view/>
+  <FooterCom></FooterCom>
 </template>
 
 <script>
-import HeaderComponent from './components/HeaderComponent.vue';
-import MainHeroComponent from './components/MainHeroComponent.vue';
-import MainComponent from './components/MainComponent.vue';
-import FooterComponent from './components/FooterComponent.vue';
+import FooterCom from './components/blocks/FooterCom.vue';
+import HeaderCom from './components/blocks/HeaderCom.vue';
 
 export default {
   name: 'App',
   components: {
-    HeaderComponent,
-    MainHeroComponent,
-    MainComponent,
-    FooterComponent,
+    HeaderCom,
+    FooterCom,
   }
 }
 </script>
 
+
 <style lang="scss">
-@import url(../src/assets/styles/style.css);
+  @import './assets/styles/_vars.scss';
+
+  @font-face {
+    font-display: swap;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/jost-v15-cyrillic_latin-regular.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./assets/fonts/jost-v15-cyrillic_latin-600.woff2') format('woff2');
+  }
+
+
+  @font-face {
+    font-display: swap;
+    font-family: 'DM Serif Display';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/dm-serif-display-v15-latin-regular.woff2') format('woff2');
+  }
+
+
+  html {
+    line-height: 1.25;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    font-weight: 400;
+  }
+
+  main {
+    display: block;
+  }
+
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+
+  hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+  }
+
+  pre {
+    font-family: monospace, monospace;
+    font-size: 1em;
+  }
+
+  a {
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted;
+  }
+
+  b,
+  strong {
+    font-weight: bolder;
+  }
+
+  code,
+  kbd,
+  samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+  }
+
+  small {
+    font-size: 80%;
+  }
+
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+
+  sub {
+    bottom: -0.25em;
+  }
+
+  sup {
+    top: -0.5em;
+  }
+
+  img {
+    border-style: none;
+  }
+
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+  }
+
+  button,
+  input {
+    overflow: visible;
+  }
+
+  button,
+  select {
+    text-transform: none;
+  }
+
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    -webkit-appearance: button;
+    appearance: button;
+  }
+
+  button::-moz-focus-inner,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+
+  button:-moz-focusring,
+  [type="button"]:-moz-focusring,
+  [type="reset"]:-moz-focusring,
+  [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+
+  fieldset {
+    padding: 0.35em 0.75em 0.625em;
+  }
+
+  legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+  }
+
+  progress {
+    vertical-align: baseline;
+  }
+
+  textarea {
+    overflow: auto;
+  }
+
+  [type="checkbox"],
+  [type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  [type="number"]::-webkit-inner-spin-button,
+  [type="number"]::-webkit-outer-spin-button {
+    height: auto;
+  }
+
+  [type="search"] {
+    -webkit-appearance: textfield;
+    appearance: textfield;
+    outline-offset: -2px;
+  }
+
+  [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+
+  ::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+  }
+
+  details {
+    display: block;
+  }
+
+  summary {
+    display: list-item;
+  }
+
+  template {
+    display: none;
+  }
+
+  [hidden] {
+    display: none;
+  }
 </style>
