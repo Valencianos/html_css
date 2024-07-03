@@ -3,76 +3,7 @@
 @import './_vars.scss';
 @import './_blog.scss';
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  background: #fff;
-}
-
-button {
-  cursor: pointer;
-}
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.footer {
-  margin-bottom: 100px;
-  &__box {
-    display: flex;
-    justify-content: space-between;
-  }
-  &__logo {
-    margin-bottom: 30px;
-  }
-  &__media {
-    &_link {
-      margin-right: 20px;
-    }
-  }
-  &__links {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    &_title {
-      font-family: $second-family;
-      font-weight: 400;
-      font-size: 25px;
-      line-height: 1.25;
-      color: $title-color;
-    }
-    &_text {
-      font-family: $font-family;
-      font-weight: 400;
-      font-size: 22px;
-      line-height: 3;
-      letter-spacing: 0.01em;
-      color: $second-color;
-    }
-  }
-  &__contacts {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    &_title {
-      font-family: $second-family;
-      font-weight: 400;
-      font-size: 25px;
-      line-height: 1.25;
-      color: $title-color;
-    }
-    &_info {
-      font-family: $font-family;
-      font-weight: 400;
-      font-size: 22px;
-      line-height: 3;
-      letter-spacing: 0.01em;
-      color: $second-color;
-    }
-  }
 }

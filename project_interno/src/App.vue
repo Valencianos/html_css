@@ -46,6 +46,11 @@ export default {
     src: url('./assets/fonts/dm-serif-display-v15-latin-regular.woff2') format('woff2');
   }
 
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
   html {
     line-height: 1.25;
@@ -55,6 +60,7 @@ export default {
   body {
     margin: 0;
     font-weight: 400;
+    background: #fff;
   }
 
   main {
@@ -138,6 +144,7 @@ export default {
   button,
   input {
     overflow: visible;
+    cursor: pointer;
   }
 
   button,
