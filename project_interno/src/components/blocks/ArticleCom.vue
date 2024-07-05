@@ -1,4 +1,4 @@
-<template lang="">
+<template>
   <section class="articles">
     <div class="container">
       <div class="articles__box">
@@ -7,7 +7,7 @@
         </p>
       </div>
       <div class="articles__content">
-        <article v-for="article in articles.slice(0, 3)" :key="article.id" class="articles__item item">
+        <article v-for="article in articles" :key="article.id" class="articles__item item">
           <img :src="article.img" alt="Kitchen Design" class="item__img">
           <p class="item__design">{{ article.category }}</p>
           <div class="item__text">

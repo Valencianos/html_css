@@ -2,12 +2,8 @@
   <header class="header">
     <div class="container">
       <nav class="nav">
-        <div class="nav__left">
-          <LogoCom></LogoCom>
-        </div>
-        <div class="nav__right">
-          <LinksCom></LinksCom>
-        </div>
+        <LogoCom></LogoCom>
+        <LinksCom></LinksCom>
       </nav>
     </div>
   </header>
@@ -26,21 +22,13 @@ export default {
 </script>
 
 <style lang="scss">
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    background: #fff;
-  }
-
   button {
     cursor: pointer;
   }
 
   .header {
     margin-top: 44px;
+    margin-bottom: 45px;
   }
 
   .container {
@@ -52,10 +40,5 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 57px;
-    &__right {
-      display: flex;
-      gap: 40px;
-    }
   }
 </style>
