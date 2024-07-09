@@ -1,5 +1,5 @@
 <template>
-    <TitleImage 
+  <TitleImage 
     :bannerImgUrl=banner.bannerImgUrl
   ></TitleImage>
 </template>
@@ -20,6 +20,6 @@ export default {
   },
 }
 </script>
-<style lang="">
+<style lang="scss">
   
 </style>

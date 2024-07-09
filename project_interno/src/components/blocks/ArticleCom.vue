@@ -7,7 +7,7 @@
         </p>
       </div>
       <div class="articles__content">
-        <article v-for="article in articles" :key="article.id" class="articles__item item">
+        <article v-for="article in project" :key="article.id" class="articles__item item">
           <img :src="article.img" alt="Kitchen Design" class="item__img">
           <p class="item__design">{{ article.category }}</p>
           <div class="item__text">
@@ -34,6 +34,7 @@ import img3 from '@/assets/img/interior-design.png'
 import img4 from '@/assets/img/kitchen-design_2.png'
 import img5 from '@/assets/img/lifestyle-design_2.png'
 import img6 from '@/assets/img/interior-design_2.png'
+import { mapGetters } from 'vuex'
 
 export default {
   name: "ArticleCom",
@@ -79,6 +80,10 @@ export default {
       ]
     }
   },
+  computed: {
+    ...mapGetters(['project'])
+  }
+
 }
 </script>
 <style lang="scss">
