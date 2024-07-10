@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import BlogDetailView from '../views/BlogDetailsView.vue'
 import BlogView from '../views/BlogView.vue'
+import NotFoundView from '../views/NotFoundView.vue'
 
 const routes = [
   {
@@ -19,7 +20,11 @@ const routes = [
     name: 'blog',
     component: BlogView
   },
-  // Add more routes as needed...
+  {
+    path: '/404',
+    name: 'not_found',
+    component: NotFoundView
+  }
 ]
 
 const router = createRouter({
