@@ -7,7 +7,7 @@
         </p>
       </div>
       <div class="articles__content">
-        <article v-for="article in articles" :key="article.id" class="articles__item item">
+        <article v-for="article in project" :key="article.id" class="articles__item item">
           <img :src="article.img" alt="Kitchen Design" class="item__img">
           <p class="item__design">{{ article.category }}</p>
           <div class="item__text">
@@ -28,17 +28,60 @@
   </section>
 </template>
 <script>
-
+import img1 from '@/assets/img/kitchen-design.png'
+import img2 from '@/assets/img/lifestyle-design.png'
+import img3 from '@/assets/img/interior-design.png'
+import img4 from '@/assets/img/kitchen-design_2.png'
+import img5 from '@/assets/img/lifestyle-design_2.png'
+import img6 from '@/assets/img/interior-design_2.png'
 import { mapGetters } from 'vuex'
 
 export default {
   name: "ArticleCom",
   data() {
     return {
+      articles: [
+        {
+          title: 'Let’s Get Solution For Building Construction Work',
+          category: 'Kitchan Design',
+          date: '26 December,2022',
+          img: img1
+        },
+        {
+          title: 'Low Cost Latest Invented Interior Designing Ideas',
+          category: 'Living Design',
+          date: '22 December,2022',
+          img: img2
+        },
+        {
+          title: 'Best For Any Office & Business Interior Solution',
+          category: 'Interior Design',
+          date: '25 December,2022',
+          img: img3
+        },
+        {
+          title: 'Let’s Get Solution For Building Construction Work',
+          category: 'Kitchan Design',
+          date: '26 December,2022',
+          img: img4
+        },
+        {
+          title: 'Low Cost Latest Invented Interior Designing Ideas',
+          category: 'Living Design',
+          date: '22 December,2022',
+          img: img5
+        },
+        {
+          title: 'Best For Any Office & Business Interior Solution',
+          category: 'Interior Design',
+          date: '25 December,2022',
+          img: img6
+        }
+      ]
     }
   },
   computed: {
-    ...mapGetters(['articles'])
+    ...mapGetters(['project'])
   }
 
 }
