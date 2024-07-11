@@ -3,7 +3,7 @@
     <div class="container">
       <h3 class="post__title">Latest Post</h3>
       <div class="post__box">
-        <img class="post__img" :src="postImg" alt="">
+        <img class="post__img" :src="postImg" :alt="postTitle">
         <div class="post__textbox">
           <h4 class="post__textbox_title">{{ postTitle }}</h4>
           <p class="post__textbox_text">{{ postText }}</p>
